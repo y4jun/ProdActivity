@@ -1,0 +1,30 @@
+{
+	"assignments": [
+	{
+		"course": "COGS 120",
+		"title" : "A5",
+		"date" : "20 Jan 2020",
+		"color" : "green"
+	},
+	{
+		"course": "DSGN 160",
+		"title" : "Reading Reflection",
+		"date" : "28 Jan 2020",
+		"color" : "#ff9999"
+	},
+	{
+		"course": "CSE 100",
+		"title" : "PA 7",
+		"date" : "20 Feb 2020",
+		"color" : "#99ccff"
+
+	},
+	{
+		"course": "TDGE 100",
+		"title" : "Essay 3",
+		"date" : "20 Feb 2020",
+		"color" : "#92ccf4"
+
+	}
+	]
+}
