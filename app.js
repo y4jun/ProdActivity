@@ -11,6 +11,8 @@ var handlebars = require('express3-handlebars')
 var login = require('./routes/login');
 var index = require('./routes/index');
 var add = require('./routes/add');
+var profile = require('./routes/profile');
+var assignment = require("./routes/assignment")
 // var addAssignment = require('./routes/addAssignment');
 
 // Example route
@@ -42,6 +44,8 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/add', add.view);
+app.get('/profile', profile.view);
+app.get('/assignment/:id', assignment.assignmentInfo);
 // app.get('/addAssignment', addAssignment.addAssignment);
 // Example route
 // app.get('/users', user.list);
