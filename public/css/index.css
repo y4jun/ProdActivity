@@ -14,14 +14,36 @@ html{
 
 .assignment{
 	border-radius: 10px;
-	margin-right: 100px;
-	margin-left: 100px;
+	margin-right: 35px;
+	margin-left: 35px;
 	padding-top: 1px;
 	padding-bottom: 1px;
 }
 
+.assignment #due{
+  color: white;
+}
+
+.assignment #points{
+  color: white;
+}
+.hideInfo{
+  display: none;
+}
+
 .mainbody{
-	padding-bottom: 50px;
+	height: 100%;
+  padding-bottom: 50px;
+}
+
+#cancel{
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+#complete{
+  margin-left: 50px;
+  margin-bottom: 10px;
 }
 
 #alist{
