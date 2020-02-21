@@ -17,7 +17,33 @@ function initializePage() {
 	$('.assignment a').click(moreInfo);
 	$('.hideInfo #complete').click(completeAssignment);
 	$('.hideInfo #cancel').click(removeAssignment);
+	$('.mainbody #MemeBtn').click(memegenerate);
+	// $('.column #thuglifeBtn').click(overlay1);
+	$('.column #frameBtn').click(overlay2);
+	// $('.column #goldchainBtn').click(overlay3);
 
+}
+
+function overlay1(){
+	var position = $(".proPic").offset();
+	$("#thuglife").css({position:'absolute', top:position.top, left: position.left});
+}
+
+function overlay2(){
+	var position = $(".proPic").offset();
+	$("#frame").css({position:'absolute', top:position.top, left: position.left});
+}
+
+// function overlay3(){
+// 	var position = $(".proPic").offset();
+// 	$("#goldchain").css({position:'absolute', top:position.top, left: position.left});
+// }
+function memegenerate(){
+	var memeimg = document.getElementById('memeimg');
+	memeimg.src = "https://loremflickr.com/640/360";
+	$(".memebutton #MemeBtn").hide();
+	// document.getElementById("MemeBtn").innerHTML = "Try again";
+	// initializePage();
 }
 
 

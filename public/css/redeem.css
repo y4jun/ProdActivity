@@ -1,0 +1,71 @@
+.column{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	padding-bottom: 70px;
+}
+
+.row:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+
+.items{
+	margin-left: 100px;
+}
+
+.profile{
+	text-align: center;
+}
+
+.proPic{
+	height: 250px;
+	width: 250px;
+}
+
+#thuglife{
+		height: 250px;
+	width: 250px;
+}
+
+#frame{
+		height: 250px;
+	width: 250px;
+}
+
+#goldchain{
+		height: 250px;
+	width: 250px;
+}
+
+.memePic{
+	text-align: center;
+}
+
+.memePic #memeimg{
+	height: auto;
+	width: 600px;
+}
+
+.memebutton{
+	padding-top: 50px;
+	text-align: center;
+}
+
+#MemeBtn{
+	background-color: green;
+	color: white;
+	height: 40px;
+	width: 100px;
+
+}
+
+
+.listheader{
+	padding: 50px;
+}
+
+.listheader2{
+	padding: 50px;
+}

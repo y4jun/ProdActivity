@@ -13,7 +13,8 @@ var index = require('./routes/index');
 var add = require('./routes/add');
 var added = require('./routes/added');
 var profile = require('./routes/profile');
-var redeem = require('./routes/redeem')
+var redeem = require('./routes/redeem');
+// var meme = require('./routes/meme');
 
 
 // Example route
@@ -47,7 +48,8 @@ app.get('/index', index.view);
 app.get('/add', add.view);
 app.get('/added', added.addAssignment);
 app.get('/profile', profile.view);
-app.get('/redeem', redeem.view)
+app.get('/redeem', redeem.view);
+// app.get('/meme', add.addMeme);
 
 // Example route
 // app.get('/users', user.list);
@@ -55,3 +57,5 @@ app.get('/redeem', redeem.view)
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
