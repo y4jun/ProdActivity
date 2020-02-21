@@ -6,10 +6,10 @@ exports.addAssignment = function(req, res){
 						"course": req.query.course,
  						"title": req.query.title,
  						"date": req.query.duedate,
+ 						"description": req.query.description,
  						"color": req.query.color,
  						"points": req.query.points
  					    };
- 	console.log(newAssignment)
  	data.assignments.push(newAssignment)
 	res.render('index', data);
 }

@@ -50,6 +50,32 @@ html{
 	text-align: center;
 }
 
+#rlist{
+  text-align: center;
+  padding-left: 130px;
+}
+
+#view-recent{
+  float: right;
+  padding-right: 50px;
+}
+
+#view-list{
+  float: right;
+  padding-right: 50px;
+}
+
+#check-mark{
+  width:25px;
+  float: right;
+  padding-right: 5px;
+
+}
+
+#due{
+  padding-left: 25px;
+}
+
 #header{
 	height: 20px;
 }

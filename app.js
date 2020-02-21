@@ -10,10 +10,18 @@ var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
 var index = require('./routes/index');
-var add = require('./routes/add');
-var added = require('./routes/added');
+var recent = require('./routes/recent')
 var profile = require('./routes/profile');
 var redeem = require('./routes/redeem');
+var add = require('./routes/add');
+
+//var assignment = require('./routes/assignment');
+var added = require('./routes/added');
+var removed = require('./routes/removed');
+var addPoints = require('./routes/addPoints');
+var removePoints = require('./routes/removePoints');
+var json = require('./routes/json');
+
 // var meme = require('./routes/meme');
 
 
@@ -45,10 +53,18 @@ if ('development' == app.get('env')) {
 
 app.get('/', login.view);
 app.get('/index', index.view);
-app.get('/add', add.view);
-app.get('/added', added.addAssignment);
+app.get('/recent', recent.view);
 app.get('/profile', profile.view);
 app.get('/redeem', redeem.view);
+app.get('/add', add.view);
+
+//app.get('/assignment/:id', assignment.assignmentInfo);
+app.get('/added', added.addAssignment);
+app.post('/removed/:id/:corr', removed.removedAssignment);
+app.post('/addPoints/:id', addPoints.addPoints);
+app.post('/removePoints/:id', removePoints.removePoints);
+app.get('/json', json.showContents);
+
 // app.get('/meme', add.addMeme);
 
 // Example route

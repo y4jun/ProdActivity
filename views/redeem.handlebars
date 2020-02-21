@@ -21,59 +21,70 @@
 
       <div class="mainbody" style = "background-color: #e6e2da">
 
-        <div id="icon">
-          <a href="/index">
-            <img class="bicon" src="back.png" height=40px style = "float: left" />
-          </a>
-        </div>
+        <div id="container" style = "background-color: #e6e2da">
 
-        <div id="container">
+          <div id="icon">
+            <a href="/index">
+              <img class="bicon" src="back.png" height=40px style = "float: left" />
+            </a>
+          </div>
+
+          <div id="container">
 
           <div id="header">
             <h2> <b>Redeem Points</b> </h2>
           </div>
           <hr id="border"/>
 
-        </div>
-        <div id="profile">
-          <img class="proPic" src="defaultpp.png">
-        </div>
-
-        <div class="listheader">
-        <h4>Profile frames</h4>
-        </div>
-        <div class="items">
-          <div class="frame">
-            <div class="column">
-              <img src="thuglife.png" id="thuglife">
-              <h5>Thug LIfe</h5>
-              <button name="button" id="thuglifeBtn">30pts</button>
-            </div>
-            <div class="column">
-              <img src="frame.png" id="frame">
-              <h5>frame</h5>
-              <button name="button" id="frameBtn">80pts</button>
-            </div>
-            <div class="column">
-              <img src="goldchain.png" id="goldchain">
-              <h5>goldchain</h5>
-              <button name="button" id="goldchainBtn">40pts</button>
-            </div>
+          <div id="displayPoints" style="color:#dea300">
+                        <h4>Current Points</h4>
+                        <h3>{{currPoints}}pts<h3>
+                   </div>
           </div>
-        </div>
 
-        <div class="listheader2">
-        <h4>Random Picture for 5pts!</h4>
-        </div>
+          <div id="profile">
+            <img class="proPic" src="defaultpp.png">
+          </div>
 
-        <div class="memePic">
-          <img src="qmark.jpeg" id="memeimg" />
-        </div>
+          <div class="listheader">
+          <h4>Profile frames</h4>
+          </div>
+          <div class="items">
+            <div class="frame">
+              <div class="column">
+                <img src="thuglife.png" id="thuglife">
+                <h5>Thug LIfe</h5>
+                <button name="button" id="thuglifeBtn">30pts</button>
+              </div>
+              <div class="column">
+                <img src="frame.png" id="frame">
+                <h5>frame</h5>
+                <button name="button" id="frameBtn">80pts</button>
+              </div>
+              <div class="column">
+                <img src="goldchain.png" id="goldchain">
+                <h5>goldchain</h5>
+                <button name="button" id="goldchainBtn">40pts</button>
+              </div>
+              <hr id="border"/>
+            </div>
 
-        <div class="memebutton">
-          <button name="button" id="MemeBtn">Get it</button>
-        </div>
+            <div id="placeholder"><p>.</p></div>
+          </div>
 
+          <div class="listheader2">
+          <h4>Random Picture for 5pts!</h4>
+          </div>
+
+          <div class="memePic">
+            <img src="qmark.jpeg" id="memeimg" />
+          </div>
+
+          <div class="memebutton">
+            <button name="button" id="MemeBtn">Get it</button>
+          </div>
+
+        </div>
 
       </div>
 

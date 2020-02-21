@@ -4,5 +4,5 @@
  */
 var data = require('../assignments.json');
 exports.view = function(req, res){
-  res.render('redeem');
+  res.render('redeem', data);
 };
