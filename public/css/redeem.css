@@ -1,3 +1,4 @@
+
 .column{
 	float: left;
 	width: 33.33%;
@@ -16,18 +17,66 @@
 	margin-right: 5%;
 }
 
+.profilediv{
+  width: 100%;
+
+}
+
 .profile{
-	text-align: center;
+ display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#profile-center{
+  width:70%;
+  align-items: center;
+  position:relative;
+  margin: auto;
 }
 
 .proPic{
-	height: 50%;
-	width: 50%;
+width:50%;
 }
+
+#thuglife2{
+    width:25%;
+    height: auto;
+    position:absolute;
+    left:37%;
+  top:25%;
+  z-index:1;
+  opacity: 0;
+
+}
+#frame2{
+    width:58%;
+    height: auto;
+    position:absolute;
+    left:20%;
+  top:0%;
+  z-index:1;
+  opacity: 0;
+
+}
+#goldchain2{
+    width:15%;
+    height: auto;
+    position:absolute;
+    left:43%;
+  top:64%;
+  z-index:1;
+  opacity: 0;
+
+}
+
 
 #thuglife{
 	height: 100%;
 	width: 100%;
+
+
 }
 
 #frame{
@@ -53,7 +102,6 @@
 
 .memebutton{
 	padding-top: 50px;
-	padding-bottom: 50px;
 	text-align: center;
 }
 

@@ -35,7 +35,7 @@ function overlay1(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#thuglife").css({position:'absolute', top:position.top, left: position.left});
+		$("#thuglife2").css({opacity:'1'});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -60,7 +60,7 @@ function overlay2(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#frame").css({position:'absolute', top:position.top, left: position.left});
+		$("#frame2").css({opacity:'1'});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -85,7 +85,7 @@ function overlay3(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#goldchain").css({position:'absolute', top:position.top, left: position.left});
+		$("#goldchain2").css({opacity:'1'});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
