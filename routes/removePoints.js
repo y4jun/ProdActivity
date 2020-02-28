@@ -6,5 +6,5 @@ exports.removePoints = function(req, res) { 
 	data.currPoints -= pointsToSubtract;
 	console.log(data.currPoints);
 	
-	res.render('index', data)
+	res.render('redeem', data)
 }

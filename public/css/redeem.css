@@ -12,7 +12,8 @@
 }
 
 .items{
-	margin-left: 100px;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .profile{
@@ -20,23 +21,23 @@
 }
 
 .proPic{
-	height: 250px;
-	width: 250px;
+	height: 50%;
+	width: 50%;
 }
 
 #thuglife{
-	height: 250px;
-	width: 250px;
+	height: 100%;
+	width: 100%;
 }
 
 #frame{
-	height: 250px;
-	width: 250px;
+	height: 100%;
+	width: 100%;
 }
 
 #goldchain{
-	height: 250px;
-	width: 250px;
+	height: 100%;
+	width: 100%;
 }
 
 .memePic{
@@ -44,8 +45,10 @@
 }
 
 .memePic #memeimg{
-	height: auto;
-	width: 600px;
+	padding-left: 2%;
+	padding-right: 2%;
+	height: 100%;
+	width: 100%;
 }
 
 .memebutton{

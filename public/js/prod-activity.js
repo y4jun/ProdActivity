@@ -29,8 +29,11 @@ function overlay1(){
 	var currPoints = parseInt($('#displayPoints h3').text());
 
 	if(currPoints >= cost){
+		
+		$("#thuglife-item h5").remove();
+		$("#thuglifeBtn").remove();
 		var position = $(".proPic").offset();
-		$('#displayPoints h3').text(currPoints-cost + "pts");
+		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
 		$("#thuglife").css({position:'absolute', top:position.top, left: position.left});
 	}
@@ -51,8 +54,11 @@ function overlay2(){
 	var currPoints = parseInt($('#displayPoints h3').text());
 
 	if(currPoints >= cost){
+
+		$("#frame-item h5").remove();
+		$("#frameBtn").remove();
 		var position = $(".proPic").offset();
-		$('#displayPoints h3').text(currPoints-cost + "pts");
+		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
 		$("#frame").css({position:'absolute', top:position.top, left: position.left});
 	}
@@ -73,7 +79,11 @@ function overlay3(){
 	var currPoints = parseInt($('#displayPoints h3').text());
 
 	if(currPoints >= cost){
+
+		$("#goldenchain-item h5").remove();
+		$("#goldchainBtn").remove();
 		var position = $(".proPic").offset();
+		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
 		$("#goldchain").css({position:'absolute', top:position.top, left: position.left});
 	}
@@ -91,10 +101,12 @@ function overlay3(){
 function memegenerate(){
 
 	var currPoints = parseInt($('#displayPoints h3').text());
+	var cost = 5;
 
-	if(currPoints >= 5){
+	if(currPoints >= cost){
 
-	$.post("/removePoints/" + 5);
+	$.post("/removePoints/" + cost);
+	$('#curr-points').text(currPoints-cost + "pts");
 	var memeimg = document.getElementById('memeimg');
 	memeimg.src = "https://loremflickr.com/640/360";
 	$(".memebutton #MemeBtn").hide();
