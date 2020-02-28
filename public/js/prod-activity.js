@@ -83,7 +83,7 @@ function overlay3(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#goldchain2").css({opacity: 1});
+		$("#goldchain2").css({opacity:'1'});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
