@@ -46,11 +46,19 @@
                    </a>
                </div>
 
+               {{#if viewAlt}}
+                <div id= "hmbgr" class = "icon" style="opacity: 0">
+                    <span onclick="openNav()">
+                        <img src="hamburger.png" height=40px style = "float: left"/>
+                    </span>
+               </div>
+               {{else}}
                <div id= "hmbgr" class = "icon">
                     <span onclick="openNav()">
                         <img src="hamburger.png" height=40px style = "float: left" />
                     </span>
                </div>
+               {{/if}}
 
                <div id="app-title">
                    <h2 id="app-name"> <b>PRO'D ACTIVITY</b> </h2>
@@ -73,7 +81,11 @@
                           <b>Recently Completed</b> 
                         </h4>
                         <h5 id="view-recent">
+                            {{#if viewAlt}}
+                            <a href="/page_B">View List</a>
+                            {{else}}
                             <a href="/index">View List</a>
+                            {{/if}}
                         </h5>
                    </div>
 

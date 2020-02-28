@@ -10,9 +10,7 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
-var profilePoints = 0;
-var pointsEarned = 0;
-var pts = 0;
+
 function initializePage() {	
 	$('.assignment a').click(moreInfo);
 	$('.hideInfo #complete').click(removeAssignment);
@@ -35,7 +33,7 @@ function overlay1(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#thuglife").css({position:'absolute', top:position.top, left: position.left});
+		$("#thuglife2").css({opacity:'1'});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -60,7 +58,7 @@ function overlay2(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#frame").css({position:'absolute', top:position.top, left: position.left});
+		$("#frame2").css({opacity:'1'});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -85,7 +83,7 @@ function overlay3(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#goldchain").css({position:'absolute', top:position.top, left: position.left});
+		$("#goldchain2").css({opacity: 1});
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -131,6 +129,7 @@ function removeAssignment(){
 
 	var completeOrRemove = $(this).attr('id');
 	var numPoints = parseInt($(this).attr('title'));
+	var currPoints = parseInt($('#display-points h3').text());
 	var assignmentID = $(this).closest('.assignment').attr('id');
 	var target = $('#' + assignmentID);
 
@@ -148,12 +147,20 @@ function removeAssignment(){
 	else{
 		$.post("/removed/" + assignmentID + "/remove");
 	}
-
+	
 	setTimeout(
 		() => {
-			location.replace("/index");
+
+			$.get('/json', function(data){
+				if(data.viewAlt){
+					location.replace("/page_B");
+				}
+				else{
+					location.replace("/index")
+				}
+			});
 		},
 		350
 	);
-	//location.reload();
+	
 }
