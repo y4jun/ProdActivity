@@ -136,5 +136,12 @@ function removeAssignment(){
 	else{
 		$.post("/removed/" + assignmentID + "/remove");
 	}
-	location.reload();
+
+	setTimeout(
+		() => {
+			location.replace("/index");
+		},
+		350
+	);
+	//location.reload();
 }

@@ -36,6 +36,23 @@ html{
   padding-bottom: 50px;
 }
 
+#header{
+  height: 110px;
+}
+
+#home{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#app-title hr{
+  margin-top: 2%;
+}
+
+#display-points h3{
+  margin-top: 2%;
+}
+
 #cancel{
   margin-right: 25px;
   margin-bottom: 10px;
@@ -46,8 +63,10 @@ html{
   margin-bottom: 10px;
 }
 
-#alist{
-	text-align: center;
+.alist{
+  display: grid;
+  grid-template-columns: [first] 30% auto [last] 30%;
+  margin: 0 auto;
 }
 
 #rlist{
@@ -56,13 +75,12 @@ html{
 }
 
 #view-recent{
-  float: right;
-  padding-right: 50px;
+  margin-left: auto;
+  margin-right: 15%;
 }
 
 #view-list{
-  float: right;
-  padding-right: 50px;
+ text-align: center;
 }
 
 #check-mark{
@@ -74,14 +92,6 @@ html{
 
 #due{
   padding-left: 25px;
-}
-
-#header{
-	height: 20px;
-}
-
-#home{
-	height: 10px;
 }
 
 #date{
@@ -99,16 +109,12 @@ html{
 	padding-right: 10px;
 }
 
-#container{
-	padding-top: 10px;
-}
-
 #content{
 	text-align: center;
 }
 
-#header{
-	text-align: center;
+#app-title{
+  text-align: center;
 }
 
 /* side navigation menu */
