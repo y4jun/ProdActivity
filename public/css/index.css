@@ -85,13 +85,21 @@ html{
 
 #check-mark{
   width:25px;
-  float: right;
+  text-align: center;
   padding-right: 5px;
+  padding-top: 8px;
 
 }
 
-#due{
-  padding-left: 25px;
+#assignment-header{
+  display: grid;
+  grid-template-columns: [first] 10% auto [last] 10%;
+}
+
+#prio{
+  padding-top: 1px;
+  padding-left: 8px;
+  text-align: left;
 }
 
 #date{

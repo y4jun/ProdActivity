@@ -22,6 +22,18 @@ html{
 	padding-left: 40px;
 }
 
+#radio-prio{
+	display: inline-block;
+}
+
+#radio-prio label{
+	padding-right: 5px;
+}
+
+#prio-label{
+	display:inline;
+}
+
 #container{
 	text-align: center;
 	padding-top: 10px;

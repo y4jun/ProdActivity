@@ -12,6 +12,7 @@ $(document).ready(function() {
  */
 
 function initializePage() {	
+
 	$('.assignment a').click(moreInfo);
 	$('.hideInfo #complete').click(removeAssignment);
 	$('.hideInfo #remove').click(removeAssignment);
@@ -21,6 +22,7 @@ function initializePage() {
 	$('.column #goldchainBtn').click(overlay3);
 
 }
+
 
 function overlay1(){
 	var cost = parseInt($(this).text());
@@ -109,6 +111,16 @@ function memegenerate(){
 	memeimg.src = "https://loremflickr.com/640/360";
 	$(".memebutton #MemeBtn").hide();
 	}
+	else{
+		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
+		$(this).closest('.memebutton').append(html);
+		var target = $('.memebutton p');
+		target.animate({
+    	opacity: "-=1"
+  		}, 800, function() {
+    	target.remove();
+  		});
+	}
 	// document.getElementById("MemeBtn").innerHTML = "Try again";
 	// initializePage();
 }
@@ -147,7 +159,7 @@ function removeAssignment(){
 	else{
 		$.post("/removed/" + assignmentID + "/remove");
 	}
-	
+
 	setTimeout(
 		() => {
 
@@ -160,7 +172,7 @@ function removeAssignment(){
 				}
 			});
 		},
-		350
+	350
 	);
-	
+
 }

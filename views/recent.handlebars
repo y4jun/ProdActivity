@@ -93,11 +93,21 @@
 
                 {{#each recent}}
                 <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
+  
+                  <div id="assignment-header">
+                    <h5 id="prio"> <b>{{priority}}</b> </h5>
+                    <h4 id="due">DUE: {{date}}</h4>
+                    <img id="check-mark"src="done.png">
+                  </div>                  
+
+
+                  <!--
                   <h4 id="due">
                     DUE: {{date}}
                     <img id="check-mark"src="done.png">
                     <h4 style="color:#dea300">{{points}}pts</h4>
                   </h4>
+                -->
                   <a href="#" class="thumbnail">
                     <h3>{{course}}</h3>
                     <h4>{{title}}</h4>

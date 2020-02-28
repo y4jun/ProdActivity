@@ -28,6 +28,7 @@
 
 }
 
+
 #profile-center{
   width:70%;
   align-items: center;
@@ -41,6 +42,7 @@
   position:relative;
   margin: auto;
 }
+
 
 .proPic{
 width:50%;
@@ -106,6 +108,7 @@ width:50%;
 
 .memebutton{
 	padding-top: 50px;
+	padding-bottom: 50px;
 	text-align: center;
 }
 

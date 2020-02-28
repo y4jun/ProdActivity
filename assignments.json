@@ -3,40 +3,45 @@
 	"currPoints" : 0,
 	"assignments": [
 		{
+
 			"id" : 1,
-			"course": "COGS 120",
-			"title" : "A5",
-			"date" : "20 Jan 2020",
-			"color" : "green",
-			"points" : 25,
-			"description" : "User's inputted description for this assignment"
+			"course": "TDGE 100",
+			"title" : "Essay 3",
+			"date" : "10 Mar 2020",
+			"color" : "#ffdb4d",
+			"priority" : "med",
+			"points" : 20,
+			"description" : "User's inputted description for this assignment"			
 		},
 		{
 			"id" : 2,
 			"course": "DSGN 160",
 			"title" : "Reading Reflection",
-			"date" : "28 Jan 2020",
-			"color" : "#ff9999",
+			"date" : "2 Mar 2020",
+			"color" : "#71da71",
+			"priority" : "low",
 			"points" : 15,
 			"description" : "User's inputted description for this assignment"
 		},
 		{
 			"id" : 3,
 			"course": "CSE 100",
-			"title" : "PA 7",
-			"date" : "20 Feb 2020",
-			"color" : "#99ccff",
+			"title" : "PA 8",
+			"date" : "29 Feb 2020",
+			"color" : "#ff3333",
+			"priority" : "high",
 			"points" : 35,
 			"description" : "User's inputted description for this assignment"
 
 		},
 		{
 			"id" : 4,
-			"course": "TDGE 100",
-			"title" : "Essay 3",
-			"date" : "20 Feb 2020",
-			"color" : "#92ccf4",
-			"points" : 20,
+			"course": "COGS 120",
+			"title" : "A8",
+			"date" : "28 Feb 2020",
+			"color" : "#ff3333",
+			"priority" : "high",
+			"points" : 25,
 			"description" : "User's inputted description for this assignment"
 		}
 	],

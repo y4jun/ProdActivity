@@ -85,11 +85,20 @@
                         </h5>
                    </div>
 
-
+                {{#if noAssignments}}
+                <div id="no-assignments">
+                  <h5> <b>You're done for now! You may now relax...</b> </h5>
+                  <img src="hammock.png" height=150px>
+                </div>
+                {{/if}}
+                
 
                 {{#each assignments}}
                 <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
-                  <h4 id="due">DUE: {{date}}</h4>
+                  <div id="assignment-header">
+                    <h5 id="prio"> <b>{{priority}}</b> </h5>
+                    <h4 id="due">DUE: {{date}}</h4>
+                  </div>
                   <a href="#" class="thumbnail">
                     <h3>{{course}}</h3>
                     <h4>{{title}}</h4>
