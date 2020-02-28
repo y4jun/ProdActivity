@@ -13,6 +13,7 @@
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
         <link href="css/profile.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
 
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,15 +21,31 @@
 
     <body>
 
+        {{#if viewAlt}}
+        <div class="bottomNav">
+          <a href="/profile" class="active">Profile</a>
+          <a href="/page_B">Home</a>
+          <a href="/redeem">Redeem</a>
+        </div>
+        {{/if}}
+
         <div class="main" style = "background-color: #e6e2da">
 
             <div id="container" style = "background-color: #e6e2da">
 
+                {{#if viewAlt}}
+                <div id="icon" style="opacity: 0">
+                    <a href="/index">
+                        <img class="bicon" src="back.png" height=40px style = "float: left" />
+                    </a>
+                </div>
+                {{else}}
                 <div id="icon" style="clear: both">
                     <a href="/index">
                         <img class="bicon" src="back.png" height=40px style = "float: left" />
                     </a>
                 </div>
+                {{/if}}
 
                 <img class="proPic" src="defaultpp.png" style="width:50%">
                 <h1>Example Name</h1>
@@ -43,7 +60,7 @@
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <p> 
                     <a href="/">
-                        <button>Sign Out</button>
+                        <button style="margin-bottom: 5%">Sign Out</button>
                     </a>
                 </p>
 

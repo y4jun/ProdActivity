@@ -19,12 +19,20 @@
 
     <body>
 
+        {{#if viewAlt}}
+        <div class="bottomNav">
+          <a href="/profile">Profile</a>
+          <a href="/page_B" class="active">Home</a>
+          <a href="/redeem">Redeem</a>
+        </div>
+        {{else}}
         <div id="sideNav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="/index">Home</a>
           <a href="/profile">Profile</a>
-          <a href="redeem">Redeem Points</a>
+          <a href="/redeem">Redeem Points</a>
         </div>
+        {{/if}}
 
         <div class="mainbody" style = "background-color: #e6e2da">
 
@@ -38,11 +46,19 @@
                    </a>
                </div>
 
+               {{#if viewAlt}}
+                <div id= "hmbgr" class = "icon" style="opacity: 0">
+                    <span onclick="openNav()">
+                        <img src="hamburger.png" height=40px style = "float: left"/>
+                    </span>
+               </div>
+               {{else}}
                <div id= "hmbgr" class = "icon">
                     <span onclick="openNav()">
                         <img src="hamburger.png" height=40px style = "float: left" />
                     </span>
                </div>
+               {{/if}}
 
                <div id="app-title">
                    <h2 id="app-name"> <b>PRO'D ACTIVITY</b> </h2>

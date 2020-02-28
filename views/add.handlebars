@@ -16,18 +16,31 @@
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
-        <link href="css/add.css" rel="stylesheet">
+         <link href="css/add.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
     </head>
 
     <body>
+
+        {{#if viewAlt}}
+        <div class="bottomNav">
+          <a href="/profile">Profile</a>
+          <a href="/page_B" class="active">Home</a>
+          <a href="/redeem">Redeem</a>
+        </div>
+        {{/if}}     
+
         <div class="mainbody" style = "background-color: #e6e2da">
 
+          {{#if viewAlt}}
+          {{else}}
            <div id="icon" style="clear: both">
                <a href="/index">
                     <img class="bicon" src="back.png" height=40px style = "float: left" />
                </a>
            </div>
-       
+          {{/if}}
+
            <div id="container">
 
                 <div id="header">

@@ -111,6 +111,7 @@ html{
 
 #content{
 	text-align: center;
+  padding-bottom: 50px;
 }
 
 #app-title{
@@ -165,4 +166,36 @@ html{
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+/* This is the bottom navigation menu css*/
+.bottomNav {
+  display: grid;
+  grid-template-columns: [first] 33% auto [last] 33%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
+}
+
+.bottomNav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.bottomNav a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.bottomNav a.active {
+  background-color: #4CAF50;
+  color: white;
 }

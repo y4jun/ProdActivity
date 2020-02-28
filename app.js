@@ -22,6 +22,9 @@ var addPoints = require('./routes/addPoints');
 var removePoints = require('./routes/removePoints');
 var json = require('./routes/json');
 
+//var page_A = require('./routes/index');
+//var page_B = require('./routes/');
+
 // var meme = require('./routes/meme');
 
 
@@ -64,6 +67,10 @@ app.post('/removed/:id/:corr', removed.removedAssignment);
 app.post('/addPoints/:id', addPoints.addPoints);
 app.post('/removePoints/:id', removePoints.removePoints);
 app.get('/json', json.showContents);
+
+//routes for A/B testing
+app.get('/page_A', index.view);
+app.get('/page_B', index.viewAlt);
 
 // app.get('/meme', add.addMeme);
 

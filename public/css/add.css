@@ -25,6 +25,7 @@ html{
 #container{
 	text-align: center;
 	padding-top: 10px;
+	background-color: #e6e2da;
 }
 
 #icon{
@@ -45,4 +46,8 @@ html{
 
 #addAssignment{
 	background: #e6e2da;
+}
+
+#submitBtn{
+	margin-bottom: 40px;
 }

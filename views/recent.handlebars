@@ -19,12 +19,20 @@
 
     <body>
 
+        {{#if viewAlt}}
+        <div class="bottomNav">
+          <a href="/profile">Profile</a>
+          <a href="/page_B" class="active">Home</a>
+          <a href="/redeem">Redeem</a>
+        </div>
+        {{else}}
         <div id="sideNav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="/index">Home</a>
           <a href="/profile">Profile</a>
           <a href="redeem">Redeem Points</a>
         </div>
+        {{/if}}
 
         <div class="mainbody" style = "background-color: #e6e2da">
 
