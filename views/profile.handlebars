@@ -8,7 +8,11 @@
 
         <script src="https://code.jquery.com/jquery.js"></script>   
         <script src="js/bootstrap.js"></script>
+        
+        {{> facebook}}
+        <script src="/js/facebook.js"></script>
         <script src="js/prod-activity.js"></script>
+
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -47,8 +51,8 @@
                 </div>
                 {{/if}}
 
-                <img class="proPic" src="defaultpp.png" style="width:50%">
-                <h1>Example Name</h1>
+                <img id="photo" src="defaultpp.png" style="width:50%">
+                <h1 id="name">Example Name</h1>
                 <div class="pointsDisplayed" style="color:#dea300">
                     <h3>Total Points Earned: {{totalPoints}}</h3>
                     <h3>Current Points: {{currPoints}}</h3>

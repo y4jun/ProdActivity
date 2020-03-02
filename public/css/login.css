@@ -1,17 +1,19 @@
 *{
 	text-align: center;
-	padding: 5px;
+	
+	font-family: Helvetica;
 }
 
 li{
 	list-style-type: none;
 	text-align: center;
-	padding-bottom: 5%;
+	padding-top: 10%;
 }
 
 input{
 	background-size: #333;
 	border: none;
+
 }
 
 .container {
@@ -25,17 +27,37 @@ input{
 	/*padding-bottom: 10px;*/
 }
 
+.header{
+	padding-top: 35%;
+}
+
 
 .username {
-	background-color: grey;
-	border-radius: 4px;
+	text-align: left;
+	width: 86%;
+	border: none;
+	border-bottom: 2px solid black;
+	
 }
 
 .password {
-	background-color: grey;
-	border-radius: 4px;
+	text-align: left;
+	width: 86%;
+	border: none;
+	border-bottom: 2px solid black;
+	
+}
+.submit{
+	width: 86%;
+	height: 30px;
+	background-color: #5b5656;
+	color: white;
+
 }
 
-.submit {
-	background-color: skyblue;
+
+.fbbtn{
+	width: 100px;
+	height: 100px;
 }
+

@@ -6,6 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        {{> facebook}}
+        <script src="/js/facebook.js"></script>
+
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -15,21 +18,40 @@
     <body>
       <div class="container">
         <div class="header">
-          <h1> Pro'd Activity Login </h1>
+          <h2> PRO'D ACTIVITY </h2>
         </div>
+        <br>
+        <br>
+        <br>
+
+
+
 
         <form name="login" onsubmit="return validateform() ;" method="post">
 
-          <ul>
-            <li>Username: <input class="username" type="text" name="username">
+          
+            <li><input class="username" type="text" placeholder="Username" name="username">
             </li>
 
-             <li>Password: <input class="password" type="password" name="password">
+             <li><input class="password" type="password" placeholder="Password" name="password">
             </li>
-          </ul>
+
+            <br>
+            <br>
+          
 
           <input type="button" class="submit" value="Log In" name="submit" onclick="validate()">
         </form>
+
+        
+          <br>
+          <h6>Or</h6>
+          <br>
+          <div class="fbbutton">
+            <fb:login-button class="fbbtn" scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+          </div>
+       
       </div>
 
         <script src="js/jquery-1.11.0.js"></script>
