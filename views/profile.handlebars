@@ -9,8 +9,7 @@
         <script src="https://code.jquery.com/jquery.js"></script>   
         <script src="js/bootstrap.js"></script>
         
-        {{> facebook}}
-        <script src="/js/facebook.js"></script>
+
         <script src="js/prod-activity.js"></script>
 
 
@@ -51,14 +50,14 @@
                     </div>
                     {{/if}}
 
-                    <h4> <b>Add Assignment</b> </h4>
+                    <h4> <b>My Profile</b> </h4>
                 </div>
                 <hr>
 
                 <br>
 
-                <img id="photo" src="defaultpp.png" style="width:50%">
-                <h1 id="name">Example Name</h1>
+                <img id="photo" src={{profilePic}} style="width:50%">
+                <h1 id="name">{{displayName}}</h1>
                 <div class="pointsDisplayed" style="color:#dea300">
                     <h3>Total Points Earned: {{totalPoints}}</h3>
                     <h3>Current Points: {{currPoints}}</h3>

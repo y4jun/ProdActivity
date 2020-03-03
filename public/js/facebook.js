@@ -14,13 +14,12 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-        window.location = "/index";
-         FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+        FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
   }
 }
 
 function changeUser(response){
   $(".facebookLogin").hide();
-  $("#name").text(response.name);
-  $("#photo").attr("src",response.picture.data.url);
+  $.post("/changeProfile/" + response.name + "/defaultpp.png");  //"+ response.picture.data.url);
+  window.location = "/index";
 }

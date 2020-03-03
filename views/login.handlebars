@@ -81,6 +81,8 @@ function validate()
     if ((un == usernameArray[i]) && (pw == passwordArray[i]))
     {
       valid = true;
+      //changeProfileInfo(usernameArray[i]);
+      $.post("/changeProfile/" + usernameArray[i] + "/" + "defaultpp.png");
       break;
     }
   }

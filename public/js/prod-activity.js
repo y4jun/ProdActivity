@@ -22,8 +22,12 @@ function initializePage() {
 	$('.column #goldchainBtn').click(overlay3);
 
 }
+/*
+function changeProfileInfo(name){
 
-
+	$.post("/changeProfile", {display: name});
+}
+*/
 function overlay1(){
 	var cost = parseInt($(this).text());
 	var currPoints = parseInt($('#displayPoints h3').text());

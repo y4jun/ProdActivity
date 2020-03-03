@@ -1,4 +1,24 @@
 {	
+	"users" : [
+		{
+			"name": "Yongho",
+			"password": "12345",
+			"loggedIn": false
+		},
+		{
+			"name": "Danny",
+			"password": "12345",
+			"loggedIn": false
+		},
+		{
+			"name": "Arya",
+			"password": "12345",
+			"loggedIn": false
+		}
+	],
+	"fbLoggedIn" : false,
+	"displayName" : "Example Name",
+	"profilePic" : "defaultpp.png",
 	"totalPoints" : 0,
 	"currPoints" : 0,
 	"assignments": [
