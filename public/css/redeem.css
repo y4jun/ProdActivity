@@ -6,6 +6,10 @@
 	padding-bottom: 70px;
 }
 
+h4 {
+  padding-left: 15px;
+}
+
 .row:after{
 	content:"";
 	display: table;
@@ -128,3 +132,17 @@ width:50%;
 .listheader2{
 	padding: 50px;
 }
+
+#header {
+  height: 60px;
+}
+
+#icon {
+  padding-top: 20px;
+}
+
+#header-redeem {
+  padding-right: 25px;
+
+}
+

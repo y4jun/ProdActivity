@@ -9,6 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var login = require('./routes/login');
+var signup = require('./routes/signup');
 var index = require('./routes/index');
 var recent = require('./routes/recent')
 var profile = require('./routes/profile');
@@ -60,6 +61,7 @@ app.get('/recent', recent.view);
 app.get('/profile', profile.view);
 app.get('/redeem', redeem.view);
 app.get('/add', add.view);
+app.get('/signup', signup.view);
 
 //app.get('/assignment/:id', assignment.assignmentInfo);
 app.get('/added', added.addAssignment);

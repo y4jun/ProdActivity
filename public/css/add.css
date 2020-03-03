@@ -14,12 +14,15 @@ html{
 }
 
 .mainbody img{
-	padding-right: 10px;
+	/*padding-right: 10px;*/
+
 }
 
 .form-group{
 	padding-right: 40px;
 	padding-left: 40px;
+	/*padding-top: 10px;*/
+	text-align: left;
 }
 
 #radio-prio{
@@ -36,12 +39,12 @@ html{
 
 #container{
 	text-align: center;
-	padding-top: 10px;
-	background-color: #e6e2da;
+	background-color: white;
 }
 
 #icon{
 	padding-top: 10px;
+	padding-left: 10px;
 }
 
 #repeat{
@@ -52,14 +55,23 @@ html{
 	padding-bottom: 20px;
 }
 
-.bicon{
-	padding-left: 10px;
-}
+
 
 #addAssignment{
-	background: #e6e2da;
+	background: white;
 }
 
 #submitBtn{
 	margin-bottom: 40px;
+}
+
+h4 {
+	text-align: center;
+	padding-right: 15px;
+}
+
+#header-add{
+	height: 60px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }

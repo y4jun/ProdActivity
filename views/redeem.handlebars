@@ -28,24 +28,26 @@
         </div>
         {{/if}}
 
-      <div class="mainbody" style = "background-color: #e6e2da">
+      <div class="mainbody" style = "background-color: white">
 
-        <div class="redeemCon" id="container" style = "background-color: #e6e2da">
+        <div class="redeemCon" id="container" style = "background-color: white">
 
-          {{#if viewAlt}}
-          {{else}}
-          <div id="icon">
-            <a href="/index">
-              <img class="bicon" src="back.png" height=40px style = "float: left" />
-            </a>
-          </div>
-          {{/if}}
 
           <div id="container">
+            <div id="header">
+              {{#if viewAlt}}
+              {{else}}
+              <div id="icon">
+                <a href="/index">
+                  <img class="bicon" src="back.png" height=30px style = "float: left" />
+                </a>
+              </div>
+              {{/if}}
 
-          <div id="header-redeem">
-            <h2> <b>Redeem Points</b> </h2>
-          </div>
+              <div id="header-redeem">
+              <h4> <b>Redeem Points</b> </h4>
+              </div>
+            </div>
           <hr id="border"/>
 
           <div id="displayPoints" style="color:#dea300">

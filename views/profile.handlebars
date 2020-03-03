@@ -33,23 +33,29 @@
         </div>
         {{/if}}
 
-        <div class="main" style = "background-color: #e6e2da">
+        <div class="main" style = "background-color: white">
 
-            <div id="container" style = "background-color: #e6e2da">
+            <div id="container" style = "background-color: white">
+                <div class="header">
+                    {{#if viewAlt}}
+                    <div id="icon" style="opacity: 0">
+                        <a href="/index">
+                            <img class="bicon" src="back.png" height=30px style = "float: left" />
+                        </a>
+                    </div>
+                    {{else}}
+                    <div id="icon" style="clear: both">
+                        <a href="/index">
+                            <img class="bicon" src="back.png" height=30px style = "float: left" />
+                        </a>
+                    </div>
+                    {{/if}}
 
-                {{#if viewAlt}}
-                <div id="icon" style="opacity: 0">
-                    <a href="/index">
-                        <img class="bicon" src="back.png" height=40px style = "float: left" />
-                    </a>
+                    <h4> <b>Add Assignment</b> </h4>
                 </div>
-                {{else}}
-                <div id="icon" style="clear: both">
-                    <a href="/index">
-                        <img class="bicon" src="back.png" height=40px style = "float: left" />
-                    </a>
-                </div>
-                {{/if}}
+                <hr>
+
+                <br>
 
                 <img id="photo" src="defaultpp.png" style="width:50%">
                 <h1 id="name">Example Name</h1>
@@ -63,6 +69,8 @@
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <p> 
+                    <br>
+                    <br>
                     <a href="/">
                         <button style="margin-bottom: 5%">Sign Out</button>
                     </a>

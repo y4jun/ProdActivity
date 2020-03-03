@@ -13,7 +13,7 @@ html{
   /*max-width: 300px;*/
   margin: auto;
   text-align: center;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   height: 100%;
 }
 
@@ -22,9 +22,13 @@ html{
   font-size: 18px;
 }
 
-.bicon{
-  padding-left: 10px;
+#icon {
+  padding-top: 10px;
 }
+
+/*.bicon{
+  padding-left: 10px;
+}*/
 
 .proPic{
   padding-right: 50px;
@@ -52,4 +56,17 @@ a {
 
 button:hover, a:hover {
   opacity: 0.7;
+}
+
+.header{
+  height: 60px;
+  padding-top: 10px;
+}
+
+h4 {
+  padding-right: 35px;
+}
+
+i {
+  padding-right: 10px;
 }

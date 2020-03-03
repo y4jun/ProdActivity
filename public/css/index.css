@@ -33,7 +33,8 @@ html{
 
 .mainbody{
 	height: 100%;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px*/;
+  
 }
 
 #header{
@@ -173,6 +174,7 @@ html{
 #container {
   transition: margin-left .5s;
   padding: 10px;
+  background-color: white;
 }
 
 /*change style for smaller devices*/

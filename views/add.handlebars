@@ -30,23 +30,24 @@
         </div>
         {{/if}}     
 
-        <div class="mainbody" style = "background-color: #e6e2da">
+        <div class="mainbody" style = "background-color: white">
 
-          {{#if viewAlt}}
-          {{else}}
-           <div id="icon" style="clear: both">
-               <a href="/index">
-                    <img class="bicon" src="back.png" height=40px style = "float: left" />
-               </a>
-           </div>
-          {{/if}}
 
            <div id="container">
 
                 <div id="header-add">
-                   <h2> <b>Add Assignment</b> </h2>
+                  {{#if viewAlt}}
+                  {{else}}
+                   <div id="icon" style="clear: both">
+                       <a href="/index">
+                            <img class="bicon" src="back.png" height=30px style = "float: left" />
+                       </a>
+                   </div>
+                  {{/if}}
+                   <h4> <b>Add Assignment</b> </h4>
                 </div>
                 <hr id="border"/>
+                <br>
 
 
             <form id="addAssignment" role="form" method="get" action="/added">
