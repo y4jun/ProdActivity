@@ -48,6 +48,7 @@ function clickHome(e) {
 	e.preventDefault();
 	ga('create', 'UA-159672138-1', 'auto');
 	ga('send', 'event', 'sideNav_Home', 'click');
+	location.replace("/index");
 }
 function clickProfile(e) {
 	e.preventDefault();
