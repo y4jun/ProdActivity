@@ -149,7 +149,7 @@ function overlay3(){
 }
 function memegenerate(){
 
-	var currPoints = parseInt($('#displayPoints h3').text());
+	var currPoints = parseInt($('#displayPoints h4').text());
 	var cost = 5;
 
 	if(currPoints >= cost){

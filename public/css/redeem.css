@@ -7,7 +7,15 @@
 }
 
 h4 {
-  padding-left: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h5 {
+  float: left;
+  padding-right: 28px;
+  padding-left: 42px;
+  margin-top: 0;
 }
 
 .row:after{
@@ -147,4 +155,36 @@ width:50%;
 
 .GC h5{
   padding-top: 5px;
+}
+
+#displayPoints {
+  display: inline-block;
+}
+
+.star {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.stars {
+  text-align: center;
+}
+
+#myProgress {
+  width: 92%;
+  background-color: #dbdbdb;
+  margin-left: 14px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+#myBar {
+  height: 15px;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.progressBar {
+  height: 30px;
+  margin-bottom: 30px;
 }
