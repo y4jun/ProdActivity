@@ -22,6 +22,7 @@ var removed = require('./routes/removed');
 var addPoints = require('./routes/addPoints');
 var removePoints = require('./routes/removePoints');
 var changeProfile = require('./routes/changeProfile');
+var savechanges = require('./routes/savechanges');
 var json = require('./routes/json');
 
 //var page_A = require('./routes/index');
@@ -70,6 +71,7 @@ app.post('/removed/:id/:corr', removed.removedAssignment);
 app.post('/addPoints/:id', addPoints.addPoints);
 app.post('/removePoints/:id', removePoints.removePoints);
 app.post('/changeProfile/:id/:pic', changeProfile.changeProfile);
+app.post('/savechanges/:id', savechanges.savechanges);
 app.get('/json', json.showContents);
 
 //routes for A/B testing

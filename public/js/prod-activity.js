@@ -20,6 +20,11 @@ function initializePage() {
 	$('.column #thuglifeBtn').click(overlay1);
 	$('.column #frameBtn').click(overlay2);
 	$('.column #goldchainBtn').click(overlay3);
+	$('#hmbgr').click(clickHamburger);
+	$('.sideNav_Home').click(clickHome);
+	$('.sideNav_Profile').click(clickProfile);
+	$('.sideNav_Redeem').click(clickRedeem);
+	$('.view-recent').click(clickRecent);
 
 }
 /*
@@ -28,6 +33,35 @@ function changeProfileInfo(name){
 	$.post("/changeProfile", {display: name});
 }
 */
+function clickRecent(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'viewRecent', 'click');
+}
+
+function clickHamburger(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'hmgrMenu', 'click');
+}
+function clickHome(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'sideNav_Home', 'click');
+}
+function clickProfile(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'sideNav_Profile', 'click');
+	location.replace("/profile");
+}
+function clickRedeem(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'sideNav_Redeem', 'click');
+	location.replace("/redeem");
+}
+
 function overlay1(){
 	var cost = parseInt($(this).text());
 	var currPoints = parseInt($('#displayPoints h3').text());
@@ -40,6 +74,8 @@ function overlay1(){
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
 		$("#thuglife2").css({opacity:'1'});
+		$.post("/savechanges/thuglife");
+		location.replace("/redeem");
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -65,6 +101,8 @@ function overlay2(){
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
 		$("#frame2").css({opacity:'1'});
+		$.post("/savechanges/frame");
+		location.replace("/redeem");
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
@@ -90,6 +128,8 @@ function overlay3(){
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
 		$("#goldchain2").css({opacity:'1'});
+		$.post("/savechanges/goldchain");
+		location.replace("/redeem");
 	}
 	else{
 		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");

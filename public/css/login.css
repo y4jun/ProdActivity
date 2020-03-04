@@ -1,7 +1,7 @@
 *{
 	text-align: center;
 	
-	font-family: Helvetica;
+	font-family: sans-serif;
 }
 
 li{
@@ -28,7 +28,7 @@ input{
 }
 
 .header{
-	padding-top: 35%;
+	padding-top: 5%;
 }
 
 

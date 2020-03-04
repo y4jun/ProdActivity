@@ -21,6 +21,9 @@
 	"profilePic" : "defaultpp.png",
 	"totalPoints" : 0,
 	"currPoints" : 0,
+	"thuglifeBought" : false,
+	"frameBought" : false,
+	"goldchainBought" : false,
 	"assignments": [
 		{
 
@@ -30,7 +33,7 @@
 			"date" : "10 Mar 2020",
 			"color" : "#ffdb4d",
 			"priority" : "med",
-			"points" : 20,
+			"points" : 1000,
 			"description" : "User's inputted description for this assignment"			
 		},
 		{
