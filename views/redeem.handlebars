@@ -50,25 +50,29 @@
 
 
           <div id="container">
-            <div id="header">
+
+            <div class="header">
               {{#if viewAlt}}
+              <div id="icon" style="opacity: 0">
+                  <a href="/index">
+                      <img class="bicon" src="back.png" height=30px style = "float: left" />
+                  </a>
+              </div>
               {{else}}
-              <div id="icon">
-                <a href="/index">
-                  <img class="bicon" src="back.png" height=30px style = "float: left" />
-                </a>
+              <div id="icon" style="clear: both">
+                  <a href="/index">
+                      <img class="bicon" src="back.png" height=30px style = "float: left" />
+                  </a>
               </div>
               {{/if}}
 
-              <div id="header-redeem">
               <h4> <b>Redeem Points</b> </h4>
-              </div>
-            </div>
+          </div>
+
           <hr id="border"/>
 
           <div id="displayPoints" style="color:#dea300">
-                        <h4>Current Points</h4>
-                        <h3 id="curr-points">{{currPoints}}pts<h3>
+                        <h4>Current Points: {{currPoints}}pts</h4>
                    </div>
           </div>
 

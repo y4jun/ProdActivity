@@ -15,6 +15,7 @@ var recent = require('./routes/recent')
 var profile = require('./routes/profile');
 var redeem = require('./routes/redeem');
 var add = require('./routes/add');
+var calendar = require('./routes/calendar');
 
 //var assignment = require('./routes/assignment');
 var added = require('./routes/added');
@@ -64,6 +65,7 @@ app.get('/profile', profile.view);
 app.get('/redeem', redeem.view);
 app.get('/add', add.view);
 app.get('/signup', signup.view);
+app.get('/calendar', calendar.viewCalendar);
 
 //app.get('/assignment/:id', assignment.assignmentInfo);
 app.get('/added', added.addAssignment);

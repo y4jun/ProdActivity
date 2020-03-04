@@ -14,5 +14,5 @@ exports.savechanges = function(req, res) { 
 		data.goldchainBought = true;
 	}
 	
-	res.render('index', data)
+	res.render('redeem', data)
 }

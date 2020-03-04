@@ -37,11 +37,20 @@ html{
   
 }
 
-#header{
-  height: 70px;
-  
-  padding-top: 10px;
+#header-top{
+  display: grid;
+  grid-template-columns: [first] 10% auto [last] 10%;
+}
 
+#header{
+
+  position: fixed;
+  margin-top: -5px;
+  padding-top: 10px;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  width: 100%;
 }
 
 #home{
@@ -50,13 +59,14 @@ html{
   text-align: center;
 }
 
-#app-title hr{
-  margin-top: 2%;
-  padding-top: 10px;
-}
+
 
 #display-points h3{
   margin-top: 2%;
+}
+
+#display-points h4{
+  margin-top: 5%;
 }
 
 #cancel{
@@ -71,7 +81,7 @@ html{
 
 .alist{
   display: grid;
-  grid-template-columns: [first] 30% auto [last] 30%;
+  grid-template-columns: [first] 0% auto [last] 50%;
   margin: 0 auto;
 }
 
@@ -81,8 +91,7 @@ html{
 }
 
 #view-recent{
-  margin-left: auto;
-  margin-right: 15%;
+  text-align: center;
 }
 
 #view-list{
@@ -120,10 +129,12 @@ html{
 }
 
 #add{
+  padding-top: 1px;
 	padding-right: 10px;
 }
 
 #content{
+  margin-top: 100px;
 	text-align: center;
   padding-bottom: 50px;
 }
@@ -184,6 +195,35 @@ html{
 }
 
 /* This is the bottom navigation menu css*/
+.topView {
+  display: grid;
+  grid-template-columns: [first] 50% auto [last] 0%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.topView a {
+  display: block;
+  color: #54d7ff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topView a:hover {
+  background: #f1f1f1;
+  color: #43accc;
+}
+
+.topView a.active {
+  background-color: #f1f1f1;
+  color: #54d7ff;
+}
+
 .bottomNav {
   display: grid;
   grid-template-columns: [first] 33% auto [last] 33%;

@@ -44,9 +44,8 @@
         {{else}}
         <div id="sideNav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="/index" class="sideNav_Home">Home</a>
           <a href="/profile" class="sideNav_Profile">Profile</a>
-          <a href="/redeem" class="sideNav_Redeem">Redeem Points</a>
+          <a href="/redeem" class="sideNav_Redeem">Redeem</a>
         </div>
         {{/if}}
 
@@ -54,31 +53,37 @@
 
               <div id="header">    
                 
+                <div id="header-top">
+                 {{#if viewAlt}}
+                  <div id= "hmbgr" class = "icon" style="opacity: 0">
+                      <span onclick="openNav()">
+                          <img src="hamburger.png" height=40px style = "float: left"/>
+                      </span>
+                 </div>
+                 {{else}}
+                 <div id= "hmbgr" class = "icon">
+                      <span onclick="openNav()">
+                          <img src="hamburger.png" height=40px style = "float: left" />
+                      </span>
+                 </div>
+                 {{/if}}
+
+                 <div id="app-title">
+                     <h3 id="app-name"> <b>PRO'D ACTIVITY</b> </h3>
+                 </div>
+
                 <div id="add" class = "icon">
-                   <a href="/add">
-                      <img src="add.png" height=40px style = "float: right" />
-                   </a>
+                     <a href="/add">
+                        <img src="add.png" height=40px style = "float: right" />
+                     </a>
+                </div>
+
                </div>
 
-               {{#if viewAlt}}
-                <div id= "hmbgr" class = "icon" style="opacity: 0">
-                    <span onclick="openNav()">
-                        <img src="hamburger.png" height=40px style = "float: left"/>
-                    </span>
-               </div>
-               {{else}}
-               <div id= "hmbgr" class = "icon">
-                    <span onclick="openNav()">
-                        <img src="hamburger.png" height=40px style = "float: left" />
-                    </span>
-               </div>
-               {{/if}}
-
-               <div id="app-title">
-
-                   <h3 id="app-name"> <b>PRO'D ACTIVITY</b> </h3>
-                   
-               </div>
+              <div class="topView">
+                  <a href="/index" class="active">TO DO: </a>
+                  <a href="/recent">DONE: </a>
+              </div>
 
             </div>
 
@@ -92,19 +97,8 @@
 
                <div id="content">
 
-                       <div class="alist">
-                        <h4></h4> <!-- place holder h4 element -->
-                        <h4 id="view-list"> 
-                          <b>Assignment List</b> 
-                        </h4>
-                        <h5 id="view-recent">
-                            <a href="/recent">View Recent</a>
-                        </h5>
-                   </div>
-
                    <div id="display-points" style="color:#dea300">
-                        <h4>Current Points:</h4>
-                        <h3 id="curr-points">{{currPoints}}pts<h3>
+                        <h4>Current Points: {{currPoints}}pts</h4>
                    </div>
 
 
