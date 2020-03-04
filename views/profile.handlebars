@@ -67,8 +67,23 @@
                 <hr>
 
                 <br>
+                    <div class="profilediv">
+                        <div id="profile">
+                          <div id="profile-center">
+                            <img class="proPic" src={{profilePic}} id=PROFILE>
+                            {{#if thuglifeBought}}
+                            <img class="thuglife2" id=thuglife2 src="thuglife2.png">
+                            {{/if}}
+                            {{#if frameBought}}
+                            <img class="frame2" id=frame2 src="frame2.png">
+                            {{/if}}
+                            {{#if goldchainBought}}
+                            <img class="goldchain2" id=goldchain2 src="goldchain2.png">
+                            {{/if}}
 
-                <img id="photo" src={{profilePic}} style="width:50%">
+                          </div>
+                        </div>
+                      </div>
                 <h1 id="name">{{displayName}}</h1>
                 <div class="pointsDisplayed" style="color:#dea300">
                     <h3>Total Points Earned: {{totalPoints}}</h3>

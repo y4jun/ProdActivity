@@ -64,8 +64,8 @@ width:50%;
     width:58%;
     height: auto;
     position:absolute;
-    left:20%;
-  top:0%;
+    left:21%;
+  top:-5%;
   z-index:1;
   opacity: 1;
 
@@ -89,11 +89,13 @@ width:50%;
 #frame{
 	height: 100%;
 	width: 100%;
+  opacity: 1;
 }
 
 #goldchain{
 	height: 100%;
 	width: 100%;
+  opacity: 1;
 }
 
 .memePic{
@@ -126,7 +128,8 @@ width:50%;
 }
 
 .listheader2{
-	padding: 50px;
+	padding: 5px;
+  border-style: dashed;
 }
 
 #header {
@@ -142,3 +145,6 @@ width:50%;
 
 }
 
+.GC h5{
+  padding-top: 5px;
+}
