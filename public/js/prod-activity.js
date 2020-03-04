@@ -74,7 +74,7 @@ function overlay1(){
 		var position = $(".proPic").offset();
 		$('#curr-points').text(currPoints-cost + "pts");
 		$.post("/removePoints/" + cost);
-		$("#thuglife2").css({opacity:'1'});
+		$("#thuglife").css({opacity:'0.2'});
 		$.post("/savechanges/thuglife");
 		location.replace("/redeem");
 	}

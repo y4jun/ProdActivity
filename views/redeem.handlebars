@@ -97,33 +97,68 @@
             <div class="frame">
               <div class="column" id="thuglife-item">
                 <div class="eachitem">
-                 <img src="thuglife.png" id="thuglife">
+                  {{#if thuglifeBought}}
+                 <img src="thuglife.png" id="thuglife" style="opacity: 0.3">
+                 <div class="owned">
+                  <h5>Owned</h5>
+                 </div>
+                 {{else}}
+                 <img src="thuglife.png" id="thuglife" style="opacity: 1">
+                 <h5>Thug LIfe</h5>
+                 <button name="button" id="thuglifeBtn">30pts</button>
+                 {{/if}}
                 </div>
-                <h5>Thug LIfe</h5>
+<!--                 <h5>Thug LIfe</h5>
                 {{#if thuglifeBought}}
                 {{else}}
                 <button name="button" id="thuglifeBtn">30pts</button>
-                {{/if}}
+                {{/if}} -->
               </div>
               <div class="column" id="frame-item">
                 <div class="eachitem">
-                  <img src="frame.png" id="frame">
+                {{#if frameBought}}
+                 <img src="frame.png" id="frame" style="opacity: 0.3">
+                 <div class="owned">
+                  <h5>Owned</h5>
+                 </div>
+                 {{else}}
+                 <img src="frame.png" id="frame" style="opacity: 1">
+                 <h5>Frame</h5>
+                 <button name="button" id="frameBtn">30pts</button>
+                 {{/if}}
+               </div>
+
+
+                  <!-- <img src="frame.png" id="frame">
                 </div>
                 <h5>frame</h5>
                 {{#if frameBought}}
                 {{else}}
                 <button name="button" id="frameBtn">80pts</button>
-                {{/if}}
+                {{/if}} -->
               </div>
               <div class="column" id="goldenchain-item">
                 <div class="eachitem">
-                  <img src="goldchain.png" id="goldchain">
+                  {{#if goldchainBought}}
+                 <img src="goldchain.png" id="goldchain" style="opacity: 0.3">
+                 <div class="GC">
+                  <h5>Owned</h5>
+                 </div>
+                 {{else}}
+                 <img src="goldchain.png" id="goldchain" style="opacity: 1">
+                 <div class="GC">
+                 <h5>Golden Chain</h5>
+                </div>
+                 <button name="button" id="goldchainBtn">30pts</button>
+                 {{/if}}
+               </div>
+                  <!-- <img src="goldchain.png" id="goldchain">
                 </div>
                 <h5>goldchain</h5>
                 {{#if goldchainBought}}
                 {{ else}}
                 <button name="button" id="goldchainBtn">40pts</button>
-                {{/if}}
+                {{/if}} -->
               </div>
               <hr id="border"/>
             </div>

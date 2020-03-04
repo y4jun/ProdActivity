@@ -29,10 +29,10 @@ html{
 /*.bicon{
   padding-left: 10px;
 }*/
-
+/*
 .proPic{
   padding-right: 50px;
-}
+}*/
 
 button {
   border-radius: 10px;
@@ -69,4 +69,59 @@ h4 {
 
 i {
   padding-right: 10px;
+}
+
+.profilediv{
+  width: 100%;
+}
+
+.profile{
+ display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#profile-center{
+  width:70%;
+  align-items: center;
+  position:relative;
+  margin: auto;
+}
+
+
+.proPic{
+width:50%;
+
+}
+
+#thuglife2{
+    width:25%;
+    height: auto;
+    position:absolute;
+    left:37%;
+  top:25%;
+  z-index:1;
+  opacity: 1;
+
+}
+#frame2{
+    width:58%;
+    height: auto;
+    position:absolute;
+    left:21%;
+  top:-5%;
+  z-index:1;
+  opacity: 1;
+
+}
+#goldchain2{
+    width:15%;
+    height: auto;
+    position:absolute;
+    left:43%;
+  top:64%;
+  z-index:1;
+  opacity: 1;
+
 }
