@@ -65,7 +65,10 @@ function clickRedeem(e) {
 
 function overlay1(){
 	var cost = parseInt($(this).text());
-	var currPoints = parseInt($('#displayPoints h3').text());
+	var currPoints = parseInt($('#displayPoints h4').text());
+	console.log("huh")
+	console.log(cost);
+	console.log(currPoints);
 
 	if(currPoints >= cost){
 		
@@ -86,13 +89,14 @@ function overlay1(){
     	opacity: "-=1"
   		}, 800, function() {
     	target.remove();
+    	console.log("YEah");
   		});
 	}
 }
 
 function overlay2(){
 	var cost = parseInt($(this).text());
-	var currPoints = parseInt($('#displayPoints h3').text());
+	var currPoints = parseInt($('#displayPoints h4').text());
 
 	if(currPoints >= cost){
 
@@ -119,7 +123,7 @@ function overlay2(){
 
 function overlay3(){
 	var cost = parseInt($(this).text());
-	var currPoints = parseInt($('#displayPoints h3').text());
+	var currPoints = parseInt($('#displayPoints h4').text());
 
 	if(currPoints >= cost){
 
