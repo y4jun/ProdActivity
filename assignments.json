@@ -33,7 +33,7 @@
 			"date" : "10 Mar 2020",
 			"color" : "#ffdb4d",
 			"priority" : "med",
-			"points" : 1000,
+			"points" : 20,
 			"description" : "User's inputted description for this assignment"			
 		},
 		{
