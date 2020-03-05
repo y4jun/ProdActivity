@@ -22,9 +22,12 @@ exports.addAssignment = function(req, res){
 		color = req.query.color;
 	}
 
+	var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 	var date = new Date(req.query.duedate);
 	var day = date.getDate();
-	var month = date.toLocaleString('default', { month: 'long' })
+	var month = monthNames[date.getMonth()];
 	var year = date.getFullYear();
 	date = day + " " + month.substring(0,3) + " " + year;
 
