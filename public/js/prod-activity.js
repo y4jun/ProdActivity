@@ -40,6 +40,7 @@ function clickDone(e) {
 	e.preventDefault();
 	ga('create', 'UA-159672138-1', 'auto');
 	ga('send', 'event', 'clickDone', 'click');
+	location.replace("/recent");
 }
 
 function clickAssginment(e) {
