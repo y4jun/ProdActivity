@@ -25,6 +25,9 @@ function initializePage() {
 	$('.sideNav_Profile').click(clickProfile);
 	$('.sideNav_Redeem').click(clickRedeem);
 	$('.view-recent').click(clickRecent);
+	$('.header #add').click(clickAdd);
+	$('.assignment #AssignBtn').click(clickAssginment);
+	$('.topView .done').click(clickDone);
 
 }
 /*
@@ -33,6 +36,24 @@ function changeProfileInfo(name){
 	$.post("/changeProfile", {display: name});
 }
 */
+function clickDone(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'clickDone', 'click');
+}
+
+function clickAssginment(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'clickForDescription', 'click');
+}
+
+function clickAdd(e) {
+	e.preventDefault();
+	ga('create', 'UA-159672138-1', 'auto');
+	ga('send', 'event', 'addBtn', 'click');
+}
+
 function clickRecent(e) {
 	e.preventDefault();
 	ga('create', 'UA-159672138-1', 'auto');
