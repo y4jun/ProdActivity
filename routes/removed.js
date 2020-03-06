@@ -7,6 +7,7 @@ exports.removedAssignment = function(req, res) { 
 	if(completeOrRemove == "complete"){
 		data.recent.push(data.assignments[assignmentID-1])
 		data.recent[data.recent.length-1].id = data.recent.length;
+		data.noRecent = false;
 	}
 
 	data.assignments.splice(assignmentID-1,1);

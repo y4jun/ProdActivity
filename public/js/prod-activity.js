@@ -4,8 +4,9 @@ $(document).ready(function() {
 	initializePage();
 	$('#datepicker').each(function(){
 		$(this).datepicker();
-	})
+	});
 })
+
 
 /*
  * Function that is called when the document is ready.
@@ -20,6 +21,7 @@ function initializePage() {
 	$('.column #thuglifeBtn').click(overlay1);
 	$('.column #frameBtn').click(overlay2);
 	$('.column #goldchainBtn').click(overlay3);
+
 	$('#hmbgr').click(clickHamburger);
 	$('.sideNav_Home').click(clickHome);
 	$('.sideNav_Profile').click(clickProfile);
@@ -30,6 +32,30 @@ function initializePage() {
 	$('.topView .done').click(clickDone);
 
 }
+
+function toggleSwitch(){
+	
+	if($('#calendar').css("display") == 'none'){
+		$('#calendar').show();
+		$('.assignment').hide();
+	}
+	else{
+		$('#calendar').hide();
+		$('.assignment').show();
+	}
+	
+	/*
+	var element = document.getElementById("calendar");
+	if($('#calendar').attr('class') == "display-calendar"){
+
+		element.classList.remove("display-calendar");
+	}
+	else{
+		$('#calendar').addClass("display-calendar");
+	}
+	*/
+}
+
 /*
 function changeProfileInfo(name){
 

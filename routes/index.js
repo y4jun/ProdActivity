@@ -11,8 +11,6 @@ exports.view = function(req, res){
 		return Math.abs(Date.now() - new Date(a.date)) - Math.abs(Date.now() - new Date(b.date));
 	});
 
-	data.assignments.reverse();
-	//make sure ids are in order
 	for (var i = 0; i < data.assignments.length; i++){
 		data.assignments[i].id = i + 1;
 	}

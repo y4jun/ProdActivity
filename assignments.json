@@ -21,6 +21,8 @@
 	"profilePic" : "defaultpp.png",
 	"totalPoints" : 0,
 	"currPoints" : 0,
+	"beltType" : "white",
+	"beltImg" : "white.png",
 	"thuglifeBought" : false,
 	"frameBought" : false,
 	"goldchainBought" : false,
@@ -68,5 +70,6 @@
 			"description" : "User's inputted description for this assignment"
 		}
 	],
+	"noRecent": true,
 	"recent": []		
 }

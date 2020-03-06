@@ -37,6 +37,10 @@ html{
   
 }
 
+.calendar-display{
+  display: none;
+}
+
 #header-top{
   display: grid;
   grid-template-columns: [first] 10% auto [last] 10%;
@@ -44,6 +48,7 @@ html{
 
 #header{
 
+  z-index: 1;
   position: fixed;
   margin-top: -5px;
   padding-top: 10px;
@@ -51,6 +56,18 @@ html{
   background-color: white;
   position: fixed;
   width: 100%;
+  max-width: 100vw;
+}
+
+#header-content{
+  display: grid;
+  grid-template-columns: [first] 40% auto [last] 40%;
+}
+
+#point-header{
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: [first] 25% auto [last] 25%;
 }
 
 #home{
@@ -59,15 +76,116 @@ html{
   text-align: center;
 }
 
+#point-line1{
+  margin-left: 30%;
+  width: 75%;
+}
 
+#point-line2{
+  margin-right: 30%;
+  width: 75%;
+  margin-left: -5px;
+}
+
+/*toggle swith for calendarview*/
+
+#toggle-switch img{
+  margin-top: 10px;
+}
+
+#toggle-switch{
+  text-align: right;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  z-index: -0.5;
+  display: inline-block;
+  width: 50px;
+  height: 33px;
+  margin-bottom: 0px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*end of of toggle switch*/
 
 #display-points h3{
   margin-top: 2%;
 }
 
 #display-points h4{
-  margin-top: 5%;
+  margin-top: 0;
 }
+
+#header-date{
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 0;
+  font-style: bold;
+}
+
+#header-day{
+  text-align: left;
+  padding-left: 15px;
+}
+
+
 
 #cancel{
   margin-right: 25px;
@@ -134,7 +252,7 @@ html{
 }
 
 #content{
-  margin-top: 100px;
+  margin-top: 110px;
 	text-align: center;
   padding-bottom: 50px;
 }
@@ -148,7 +266,7 @@ html{
 	height: 100%; /* 100% Full-height */
   	width: 0; /* 0 width - change this with JavaScript */
   	position: fixed; /* Stay in place */
-  	z-index: 1; /* Stay on top */
+  	z-index: 2; /* Stay on top */
   	top: 0; /* Stay at the top */
   	left: 0;
   	background-color: #111; /* Black*/
@@ -202,12 +320,12 @@ html{
   overflow: hidden;
   background-color: white;
   position: fixed;
-  width: 100%;
+  width: 100vw;
 }
 
 .topView a {
   display: block;
-  color: #54d7ff;
+  color: #2196F3;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -221,7 +339,7 @@ html{
 
 .topView a.active {
   background-color: #f1f1f1;
-  color: #54d7ff;
+  color: #2196F3;
 }
 
 .bottomNav {
@@ -251,7 +369,7 @@ html{
 }
 
 .bottomNav a.active {
-  background-color: #4CAF50;
+  background-color: #2196F3;
   color: white;
 }
 

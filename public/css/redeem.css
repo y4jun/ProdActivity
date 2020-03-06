@@ -182,6 +182,7 @@ width:50%;
   height: 15px;
   background-color: green;
   border-radius: 10px;
+  max-width: 90vw;
 }
 
 .progressBar {

@@ -26,6 +26,10 @@ html{
   padding-top: 10px;
 }
 
+#karate-belt h4{
+  padding-right: 0;
+}
+
 /*.bicon{
   padding-left: 10px;
 }*/

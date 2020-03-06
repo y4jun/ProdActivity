@@ -15,6 +15,7 @@
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
+        <link href="css/theme2.css" rel="stylesheet">
 
                 <!-- Google Analytics -->
         <script>
@@ -87,8 +88,6 @@
 
             </div>
 
-            <hr>
-
            <div id="container" style = "background-color: white">
                
 
@@ -96,10 +95,67 @@
               <!-- <h3 id="home">Home</h3> -->
 
                <div id="content">
+                <hr id="header-boarder">
 
-                   <div id="display-points" style="color:#dea300">
-                        <h4>Current Points: {{currPoints}}pts</h4>
-                   </div>
+                <div id="header-content">
+
+                  <div id="header-curdate">
+
+                    <h4 id="header-date"></h4>
+                    <h5 id="header-day"></h5>
+                    <script>
+                      
+                      var monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+                      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                      var n =  new Date();
+                      var y = n.getFullYear();
+                      var m = monthNames[n.getMonth()];
+                      var d = n.getDate();
+                      var dname = days[n.getDay()];
+                      document.getElementById("header-date").innerHTML = d + " " + m + " " + y;
+                      document.getElementById("header-day").innerHTML = dname;
+                    </script>
+
+                  </div>
+                  <div></div>
+                  <div id="toggle-switch">
+
+                    <img src="list.png" height="25px">
+          
+                      <label class="switch">
+                        <input type="checkbox" onclick="toggleSwitch()"/> 
+                        <span class="slider round"></span>
+                      </label>
+               
+
+                    <img src="calendar.png" height="25px">
+
+                  </div>
+
+
+                </div>
+
+                <div id="point-header">
+                  <hr id="point-line1">
+
+                  <div id="display-points" style="color:#dea300">
+                      <h4>Current Points: {{currPoints}}pts</h4>
+                  </div>
+
+                  <hr id="point-line2">
+                </div>
+
+
+                {{#if noRecent}}
+                <div id="no-recent">
+                  <h5> <b>You have not completed any assignments... Get to work!</b> </h5>
+                </div>
+                {{/if}}
+
+                <div class="calendar-display" id="calendar"></div>
+                <script type="text/javascript" src="js/calendar.js"></script>
+                <script type="text/javascript" src="js/initCalendar.js"></script>
 
                 {{#each recent}}
                 <div class="assignment" id="{{id}}" style ="background-color: {{color}}">

@@ -43,5 +43,5 @@ exports.addAssignment = function(req, res){
  
  	data.assignments.push(newAssignment)
  	data['noAssignments'] = false;
-	res.render('index', data);
+	res.redirect('/index');
 }
