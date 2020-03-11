@@ -93,57 +93,25 @@
                   <input type="text" class="form-control" id="points" placeholder="Points" name="points">
                 </div>
 
-                {{#if viewAlt}}
                 <div class="form-group">
                     <div id="prio-label">
                       <label for="priority">Priority:</label>
                     </div>
                     <div id="radio-prio">
               
-                        <label for="low"> 
-                          <input type="radio" id="low" name="priority" value="low">Low
-                        </label>
+                        <input type="radio" id="low" name="priority" value="low">
+                        <label for="low">Low</label>
 
-                        <label for="medium"> 
-                          <input type="radio" id="medium" name="priority" value="med">Medium
-                        </label>
+                        <input type="radio" id="medium" name="priority" value="med">
+                        <label for="medium">Medium</label>
 
-                        <label for="high"> 
-                          <input type="radio" id="high" name="priority" value="high">High
-                        </label>
+                        <input type="radio" id="high" name="priority" value="high">
+                        <label for="high">High</label>
 
                     </div>
                 </div>
-                {{else}}
-                <div class="form-group">
-                  <label for="color">Color:</label>
-                  <input type="text" class="form-control" id="color" placeholder="Green" name="color">
-                </div>
-                {{/if}}
 
-                <label>Repeat</label>
-                <div id="repeat">
-                    <select>
-                        <option value="Never">Never</option>
-                        <option value="Daily">Daily</option>
-                        <option value="Weekly">Weekly</option>
-                        <option value="Biweekly">Biweekly</option>
-                        <option value="Monthly">Monthly</option>
-                    </select>
-                </div>
-           
-                <label>Notification</lablel>
-                <div id="notification">
-                    <select>
-                        <option value="Never">Never</option>
-                        <option value="Daily">Daily</option>
-                        <option value="Weekly">Weekly</option>
-                        <option value="Biweekly">Biweekly</option>
-                        <option value="Monthly">Monthly</option>
-                    </select>
-                </div>
-
-                <input type="submit" id="submitBtn" class="btn btn-default" value="Add the assignment"></input>
+                <input type="submit" id="submitBtn" class="btn btn-default" value="Add"></input>
             </form>
 
             </div>

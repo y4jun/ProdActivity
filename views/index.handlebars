@@ -58,13 +58,13 @@
                  {{#if viewAlt}}
                   <div id= "hmbgr" class = "icon" style="opacity: 0">
                       <span onclick="openNav()">
-                          <img src="hamburger.png" height=40px style = "float: left"/>
+                          <img src="hamburger.png" height=45px style = "float: left"/>
                       </span>
                  </div>
                  {{else}}
                  <div id= "hmbgr" class = "icon">
                       <span onclick="openNav()">
-                          <img src="hamburger.png" height=40px style = "float: left" />
+                          <img src="hamburger.png" height=45px style = "float: left" />
                       </span>
                  </div>
                  {{/if}}
@@ -75,15 +75,16 @@
 
                 <div id="add" class = "icon">
                      <a href="/add">
-                        <img src="add.png" height=40px style = "float: right" />
+                        <img src="add.png" height=45px style = "float: right" />
                      </a>
                 </div>
 
                </div>
 
               <div class="topView">
-                  <a href="/index" class="active">TO DO: </a>
-                  <a href="/recent" class="done">DONE: </a>
+                  <a class="active" id="todoBtn" onclick="toggleTodo()">TO DO:</a>
+                  <a id="doneBtn" onclick="toggleDone()">DONE:</a>
+                  <hr/>
               </div>
 
             </div>
@@ -153,36 +154,67 @@
                 <script type="text/javascript" src="js/calendar.js"></script>
                 <script type="text/javascript" src="js/initCalendar.js"></script>
 
-                {{#if noAssignments}}
-                <div id="no-assignments">
-                  <h5> <b>You're done for now! You may now relax...</b> </h5>
-                  <img src="hammock.png" height=150px>
+                <div class="current-assignments">
+                    {{#if noAssignments}}
+                    <div id="no-assignments">
+                      <h5> <b>You're done for now! You may now relax...</b> </h5>
+                      <img src="hammock.png" height=150px>
+                    </div>
+                    {{/if}}                
+
+
+                    {{#each assignments}}
+                    <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
+                      <div id="assignment-header">
+                        <h5 id="prio" style="color: white"> <b>{{priority}}</b> </h5>
+                        <h4 id="due">DUE: {{date}}</h4>
+                      </div>
+                      <a href="#" class="thumbnail" id="AssignBtn">
+                        <h3>{{course}}</h3>
+                        <h4>{{title}}</h4>
+                      </a>
+                      <div class="thumbnail, hideInfo">
+                        <p style="color: white; font-size: 18px">{{description}}</p>
+                        <h4 id="points">Value: {{points}}pts</h4>
+                          <button title="{{points}}" class="removeAssignment" id="remove">Remove</button>
+                          <button title="{{points}}" class="removeAssignment" id="complete">Complete</button>
+                      </div>
+                    </div>
+                     <br>
+                    {{/each}}
+
                 </div>
-                {{/if}}                
 
+                <div class="recent-assignments">
+                    {{#if noRecent}}
+                    <div id="no-recent">
+                      <h5> <b>You have not completed any assignments... Get to work!</b> </h5>
+                    </div>
+                    {{/if}}
 
-                {{#each assignments}}
-                <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
-                  <div id="assignment-header">
-                    <h5 id="prio"> <b>{{priority}}</b> </h5>
-                    <h4 id="due">DUE: {{date}}</h4>
-                  </div>
-                  <a href="#" class="thumbnail" id="AssignBtn">
-                    <h3>{{course}}</h3>
-                    <h4>{{title}}</h4>
-                  </a>
-                  <div class="thumbnail, hideInfo">
-                    <h5 style="color:black">{{description}}</h5>
-                    <h4 id="points">Value: {{points}}pts</h4>
-                      <button title="{{points}}" class="removeAssignment" id="remove">Remove</button>
-                      <button title="{{points}}" class="removeAssignment" id="complete">Complete</button>
-                  </div>
+                    {{#each recent}}
+                    <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
+                      <div id="assignment-header">
+                        <h5 id="prio" style="color: white"> <b>{{priority}}</b> </h5>
+                        <h4 id="due">DUE: {{date}}</h4>
+                        <img id="check-mark"src="done.png">
+                      </div>
+                      <a href="#" class="thumbnail">
+                        <h3>{{course}}</h3>
+                        <h4>{{title}}</h4>
+                      </a>
+                      <h4 style="color: white">{{points}}pts</h4>
+                      <div class="thumbnail, hideInfo">
+                        <p style="color: white; font-size: 18px">{{description}}</p>
+                      </div>
 
+                    </div>
+
+                    <br>
+                    {{/each}}
                 </div>
-                <br>
-                {{/each}}
 
-                </div>
+              </div>
             </div>
         </div>
 

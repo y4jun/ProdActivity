@@ -3,24 +3,18 @@ var data = require("../assignments.json");
 exports.addAssignment = function(req, res){
 	var alistLen = data.assignments.length;
 	var color =  "#71da71";
-	var priority = "none";
+	var priority = req.query.priority;
 
-	if(data.viewAlt){
-		priority = req.query.priority;
-
-		if(priority == "low"){
-			color = "#71da71";
-		}
-		if(priority == "med"){
-			color = "#ffdb4d";
-		}
-		if(priority == "high"){
-			color = "#ff3333";
-		}
+	if(priority == "low"){
+		color = "#71da71";
 	}
-	else{
-		color = req.query.color;
+	if(priority == "med"){
+		color = "#ffdb4d";
 	}
+	if(priority == "high"){
+		color = "#ff3333";
+	}
+	
 
 	var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"

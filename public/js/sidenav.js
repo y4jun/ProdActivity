@@ -1,6 +1,6 @@
 /*set the width of the side navigation and the left margin of page content*/
 function openNav(){
-	document.getElementById("sideNav").style.width = "250px";
+	document.getElementById("sideNav").style.width = "185px";
 	/*document.getElementById("container").style.marginLeft = "250px";*/
 }
 

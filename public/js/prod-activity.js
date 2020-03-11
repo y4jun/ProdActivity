@@ -14,7 +14,8 @@ $(document).ready(function() {
 
 function initializePage() {	
 
-	$('.assignment a').click(moreInfo);
+	$('.current-assignments a').click(moreInfo);
+	$('.recent-assignments a').click(moreInfoRecent);
 	$('.hideInfo #complete').click(removeAssignment);
 	$('.hideInfo #remove').click(removeAssignment);
 	$('.mainbody #MemeBtn').click(memegenerate);
@@ -36,32 +37,29 @@ function initializePage() {
 function toggleSwitch(){
 	
 	if($('#calendar').css("display") == 'none'){
-		$('#calendar').show();
 		$('.assignment').hide();
+		$('#calendar').fadeIn();	
 	}
 	else{
 		$('#calendar').hide();
-		$('.assignment').show();
+		$('.assignment').fadeIn();
 	}
-	
-	/*
-	var element = document.getElementById("calendar");
-	if($('#calendar').attr('class') == "display-calendar"){
-
-		element.classList.remove("display-calendar");
-	}
-	else{
-		$('#calendar').addClass("display-calendar");
-	}
-	*/
 }
 
-/*
-function changeProfileInfo(name){
+function toggleTodo(){
+	$('.recent-assignments').hide();
+	$('.current-assignments').fadeIn();
+	$('.topView hr').css("margin-left", "15%");
 
-	$.post("/changeProfile", {display: name});
 }
-*/
+
+function toggleDone(){
+	$('.current-assignments').hide();
+	$('.recent-assignments').fadeIn();
+	$('.topView hr').css("margin-left", "60%");
+}
+
+
 function clickDone(e) {
 	e.preventDefault();
 	ga('create', 'UA-159672138-1', 'auto');
@@ -223,12 +221,19 @@ function memegenerate(){
 }
 
 
-
 function moreInfo(e){
 	e.preventDefault();
 	var assignmentID = $(this).closest('.assignment').attr('id');
 	console.log(assignmentID)
 	$('#' + assignmentID + ' .hideInfo').fadeToggle();
+
+}
+
+function moreInfoRecent(e){
+	e.preventDefault();
+	var assignmentID = $(this).closest('.assignment').attr('id');
+	console.log(assignmentID)
+	$('.recent-assignments ' + '#' + assignmentID + ' .hideInfo').fadeToggle();
 
 }
 
@@ -242,21 +247,31 @@ function removeAssignment(){
 	var assignmentID = $(this).closest('.assignment').attr('id');
 	var target = $('#' + assignmentID);
 
-	$('#' + assignmentID + ' .removeAssignment').hide();
+	//$('#' + assignmentID + ' .removeAssignment').hide();
+	
+	/*
 	target.animate({
     	opacity: "-=1"
   	}, 300, function() {
     target.remove();
   	});
+  	*/
 
 	if(completeOrRemove == "complete"){
+		target.addClass("slide-out-bck-tr")
+		setTimeout(
+		() => { location.replace("/index"); }, 300);
 		$.post("/removed/" + assignmentID + "/complete");
 		$.post("/addPoints/" + numPoints);
 	}
 	else{
+		target.addClass("slide-out-right")
+		setTimeout(
+		() => { location.replace("/index"); }, 500);
 		$.post("/removed/" + assignmentID + "/remove");
 	}
 
+	/*
 	setTimeout(
 		() => {
 
@@ -271,5 +286,6 @@ function removeAssignment(){
 		},
 	350
 	);
+	*/
 
 }

@@ -58,13 +58,13 @@
                  {{#if viewAlt}}
                   <div id= "hmbgr" class = "icon" style="opacity: 0">
                       <span onclick="openNav()">
-                          <img src="hamburger.png" height=40px style = "float: left"/>
+                          <img src="hamburger.png" height=45px style = "float: left"/>
                       </span>
                  </div>
                  {{else}}
                  <div id= "hmbgr" class = "icon">
                       <span onclick="openNav()">
-                          <img src="hamburger.png" height=40px style = "float: left" />
+                          <img src="hamburger.png" height=45px style = "float: left" />
                       </span>
                  </div>
                  {{/if}}
@@ -75,15 +75,15 @@
 
                 <div id="add" class = "icon">
                      <a href="/add">
-                        <img src="add.png" height=40px style = "float: right" />
+                        <img src="add.png" height=45px style = "float: right" />
                      </a>
                 </div>
 
                </div>
 
               <div class="topView">
-                  <a href="/index">TO DO: </a>
-                  <a href="/recent" class="active">DONE: </a>
+                  <a id="todoBtn">TO DO:</a>
+                  <a class="active" id="doneBtn">DONE:</a>
               </div>
 
             </div>
@@ -95,7 +95,6 @@
               <!-- <h3 id="home">Home</h3> -->
 
                <div id="content">
-                <hr id="header-boarder">
 
                 <div id="header-content">
 
@@ -160,7 +159,7 @@
                 {{#each recent}}
                 <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
                   <div id="assignment-header">
-                    <h5 id="prio"> <b>{{priority}}</b> </h5>
+                    <h5 id="prio" style="color: white"> <b>{{priority}}</b> </h5>
                     <h4 id="due">DUE: {{date}}</h4>
                     <img id="check-mark"src="done.png">
                   </div>
@@ -168,9 +167,9 @@
                     <h3>{{course}}</h3>
                     <h4>{{title}}</h4>
                   </a>
-                  <h4>{{points}}pts</h4>
+                  <h4 style="color: white">{{points}}pts</h4>
                   <div class="thumbnail, hideInfo">
-                    <h5 style="color:black">{{description}}</h5>
+                    <p style="color: white; font-size: 18px">{{description}}</p>
                   </div>
 
                 </div>
