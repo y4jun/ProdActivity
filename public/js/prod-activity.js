@@ -22,6 +22,9 @@ function initializePage() {
 	$('.column #thuglifeBtn').click(overlay1);
 	$('.column #frameBtn').click(overlay2);
 	$('.column #goldchainBtn').click(overlay3);
+	$('.column #puppybtn').click(overlay4);
+	$('.column #palmtreebtn').click(overlay5);
+	$('.column #flowerbtn').click(overlay6);
 
 	$('#hmbgr').click(clickHamburger);
 	$('.sideNav_Home').click(clickHome);
@@ -128,9 +131,9 @@ function overlay1(){
 		location.replace("/redeem");
 	}
 	else{
-		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
+		var html = ("<h6>NOT ENOUGH POINTS</h6>").fontcolor("red");
 		$(this).closest('.column').append(html);
-		var target = $('.column p');
+		var target = $('.column h6');
 		target.animate({
     	opacity: "-=1"
   		}, 800, function() {
@@ -156,9 +159,9 @@ function overlay2(){
 		location.replace("/redeem");
 	}
 	else{
-		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
+		var html = ("<h6>NOT ENOUGH POINTS</h6>").fontcolor("red");
 		$(this).closest('.column').append(html);
-		var target = $('.column p');
+		var target = $('.column h6');
 		target.animate({
     	opacity: "-=1"
   		}, 800, function() {
@@ -183,9 +186,9 @@ function overlay3(){
 		location.replace("/redeem");
 	}
 	else{
-		var html = ("<p>NOT ENOUGH POINTS</p>").fontcolor("red");
+		var html = ("<h6>NOT ENOUGH POINTS</h6>").fontcolor("red");
 		$(this).closest('.column').append(html);
-		var target = $('.column p');
+		var target = $('.column h6');
 		target.animate({
     	opacity: "-=1"
   		}, 800, function() {
@@ -193,6 +196,87 @@ function overlay3(){
   		});
 	}
 }
+function overlay4(){
+	var cost = parseInt($(this).text());
+	var currPoints = parseInt($('#displayPoints h4').text());
+
+	if(currPoints >= cost){
+
+		$("#puppy-item h5").remove();
+		$("#puppybtn").remove();
+		var position = $(".proPic").offset();
+		$('#curr-points').text(currPoints-cost + "pts");
+		$.post("/removePoints/" + cost);
+		$("#puppy2").css({opacity:'1'});
+		$.post("/savechanges/puppy");
+		location.replace("/redeem");
+	}
+	else{
+		var html = ("<h6>NOT ENOUGH POINTS</h6>").fontcolor("red");
+		$(this).closest('.column').append(html);
+		var target = $('.column h6');
+		target.animate({
+    	opacity: "-=1"
+  		}, 800, function() {
+    	target.remove();
+  		});
+	}
+}
+
+function overlay5(){
+	var cost = parseInt($(this).text());
+	var currPoints = parseInt($('#displayPoints h4').text());
+
+	if(currPoints >= cost){
+
+		$("#palmtree-item h5").remove();
+		$("#palmtreebtn").remove();
+		var position = $(".proPic").offset();
+		$('#curr-points').text(currPoints-cost + "pts");
+		$.post("/removePoints/" + cost);
+		$("#palmtree2").css({opacity:'1'});
+		$.post("/savechanges/palmtree");
+		location.replace("/redeem");
+	}
+	else{
+		var html = ("<h6>NOT ENOUGH POINTS</h6>").fontcolor("red");
+		$(this).closest('.column').append(html);
+		var target = $('.column h6');
+		target.animate({
+    	opacity: "-=1"
+  		}, 800, function() {
+    	target.remove();
+  		});
+	}
+}
+
+function overlay6(){
+	var cost = parseInt($(this).text());
+	var currPoints = parseInt($('#displayPoints h4').text());
+
+	if(currPoints >= cost){
+
+		$("#flower-item h5").remove();
+		$("#flowerbtn").remove();
+		var position = $(".proPic").offset();
+		$('#curr-points').text(currPoints-cost + "pts");
+		$.post("/removePoints/" + cost);
+		$("#flower2").css({opacity:'1'});
+		$.post("/savechanges/flower");
+		location.replace("/redeem");
+	}
+	else{
+		var html = ("<h6>NOT ENOUGH POINTS</h6>").fontcolor("red");
+		$(this).closest('.column').append(html);
+		var target = $('.column h6');
+		target.animate({
+    	opacity: "-=1"
+  		}, 800, function() {
+    	target.remove();
+  		});
+	}
+}
+
 function memegenerate(){
 
 	var currPoints = parseInt($('#displayPoints h4').text());

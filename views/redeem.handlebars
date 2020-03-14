@@ -65,12 +65,14 @@
                     </a>
                 </div>
                 {{/if}}
-
-                <h4> <b>Redeem Points</b> </h4>
+              <div id="pagename">
+                <h3> <b>Redeem Points</b> </h3>
+              </div>
             </div>
 
-          <hr id="border"/>
+        
           </div>
+          <hr id="border"/>
           <div class="stars">
 
                   <div id="displayPoints" style="color:#dea300">
@@ -82,10 +84,11 @@
                       <div id="myBar" style="width: {{currPoints}}%"></div>
                     </div>
                   <div class="progressBar">
-                     <h5>25</h5>
-                     <h5>50</h5>
-                     <h5>75</h5>
-                     <h5>100</h5>
+                    <div><h5>0</h5></div>
+                     <div><h5>25</h5></div>
+                     <div><h5>50</h5></div>
+                     <div><h5>75</h5></div>
+                     <div><h5>100</h5></div>
                   </div>
 
           </div>
@@ -102,6 +105,15 @@
                 {{/if}}
                 {{#if goldchainBought}}
                 <img class="goldchain2" id=goldchain2 src="goldchain2.png">
+                {{/if}}
+                {{#if puppyBought}}
+                <img class="puppy2" id=puppy2 src="puppy2.png">
+                {{/if}}
+                {{#if palmtreeBought}}
+                <img class="palmtree2" id=palmtree2 src="palmtree2.png">
+                {{/if}}
+                {{#if flowerBought}}
+                <img class="flower2" id=flower2 src="flower2.png">
                 {{/if}}
 
               </div>
@@ -126,11 +138,6 @@
                  <button name="button" id="thuglifeBtn">30pts</button>
                  {{/if}}
                 </div>
-<!--                 <h5>Thug LIfe</h5>
-                {{#if thuglifeBought}}
-                {{else}}
-                <button name="button" id="thuglifeBtn">30pts</button>
-                {{/if}} -->
               </div>
               <div class="column" id="frame-item">
                 <div class="eachitem">
@@ -145,15 +152,6 @@
                  <button name="button" id="frameBtn">30pts</button>
                  {{/if}}
                </div>
-
-
-                  <!-- <img src="frame.png" id="frame">
-                </div>
-                <h5>frame</h5>
-                {{#if frameBought}}
-                {{else}}
-                <button name="button" id="frameBtn">80pts</button>
-                {{/if}} -->
               </div>
               <div class="column" id="goldenchain-item">
                 <div class="eachitem">
@@ -170,13 +168,58 @@
                  <button name="button" id="goldchainBtn">30pts</button>
                  {{/if}}
                </div>
-                  <!-- <img src="goldchain.png" id="goldchain">
+              </div>
+              <hr id="border"/>
+            </div>
+
+            <div id="placeholder"><h4>New Items </h4></div>
+          </div>
+
+          <div class="items">
+            <div class="frame">
+              <div class="column" id="puppy-item">
+                <div class="eachitem">
+                  {{#if puppyBought}}
+                 <img src="puppy.png" id="puppy" style="opacity: 0.3">
+                 <div class="owned">
+                  <h5>Owned</h5>
+                 </div>
+                 {{else}}
+                 <img src="puppy.png" id="puppy" style="opacity: 1">
+                 <h5>Thug LIfe</h5>
+                 <button name="button" id="puppybtn">30pts</button>
+                 {{/if}}
                 </div>
-                <h5>goldchain</h5>
-                {{#if goldchainBought}}
-                {{ else}}
-                <button name="button" id="goldchainBtn">40pts</button>
-                {{/if}} -->
+              </div>
+              <div class="column" id="palmtree-item">
+                <div class="eachitem">
+                {{#if palmtreeBought}}
+                 <img src="palmtree.png" id="palmtree" style="opacity: 0.3">
+                 <div class="owned">
+                  <h5>Owned</h5>
+                 </div>
+                 {{else}}
+                 <img src="palmtree.png" id="palmtree" style="opacity: 1">
+                 <h5>Frame</h5>
+                 <button name="button" id="palmtreebtn">30pts</button>
+                 {{/if}}
+               </div>
+              </div>
+              <div class="column" id="flower-item">
+                <div class="eachitem">
+                  {{#if flowerBought}}
+                 <img src="flower.png" id="flower" style="opacity: 0.3">
+                 <div class="GC">
+                  <h5>Owned</h5>
+                 </div>
+                 {{else}}
+                 <img src="flower.png" id="flower" style="opacity: 1">
+                 <div class="GC">
+                 <h5>Flower</h5>
+                </div>
+                 <button name="button" id="flowerbtn">30pts</button>
+                 {{/if}}
+               </div>
               </div>
               <hr id="border"/>
             </div>

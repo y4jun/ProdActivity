@@ -1,36 +1,40 @@
 
 .column{
-	float: left;
-	width: 33.33%;
-	text-align: center;
-	padding-bottom: 70px;
-}
-
-h4 {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.progressBar h5 {
   float: left;
-  padding-right: 10%;
-  padding-left: 10%;
-  margin-top: 0;
+  width: 33.33%;
+  height: 170px;
+  text-align: center;
+  
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#pagename h3 {
+  padding-left: 5%;
+  padding-right: 8%;
+  padding-bottom: 20px;
+  margin-right: 10px;
+
+}
+
+.listheader h4 {
+  text-align: left;
+  padding: 0px;
 }
 
 .row:after{
-	content:"";
-	display: table;
-	clear: both;
+  content:"";
+  display: table;
+  clear: both;
 }
 
 .items{
-	margin-left: 5%;
-	margin-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .profilediv{
-	width: 100%;
+  width: 100%;
 }
 
 .profile{
@@ -40,112 +44,177 @@ h4 {
 
 }
 
-#profile-center{
-  width:70%;
-  align-items: center;
-  position:relative;
-  margin: auto;
-}
+
 
 #profile-center{
   width:70%;
   align-items: center;
   position:relative;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .proPic{
-width:50%;
+width:80%;
 }
-
+#thuglife{
+  background-color: #ededed;
+  border-radius: 10px;
+}
+#frame{
+  height: 92.48px;
+  background-color: #ededed;
+  border-radius: 10px; 
+}
+#goldchain{
+  height: 92.48px;
+  width: 92.48px; 
+  background-color: #ededed;
+  border-radius: 10px;
+}
 #thuglife2{
-    width:25%;
+    width:35%;
     height: auto;
     position:absolute;
-    left:37%;
+    left:33%;
   top:25%;
   z-index:1;
   opacity: 1;
 
 }
 #frame2{
-    width:58%;
+    width:88%;
     height: auto;
     position:absolute;
-    left:21%;
-  top:-5%;
+    left:6%;
+  top:-3%;
   z-index:1;
   opacity: 1;
 
 }
 #goldchain2{
-    width:15%;
+    width:23%;
     height: auto;
     position:absolute;
-    left:43%;
-  top:64%;
+    left:39%;
+  top:58%;
   z-index:1;
   opacity: 1;
+}
 
+#puppy2{
+    width:50%;
+    height: auto;
+    position:absolute;
+    left:4%;
+  top:58%;
+  z-index:1;
+  opacity: 1;
+}
+
+#palmtree2{
+    width:80%;
+    height: auto;
+    position:absolute;
+    left:10%;
+  top:0%;
+  z-index:1;
+  opacity: 1;
+}
+
+#flower2{
+    width:30%;
+    height: auto;
+    position:absolute;
+    left:2%;
+  top:-10%;
+  z-index:1;
+  opacity: 1;
+}
+
+#puppy{
+  height: 92.48px;
+  width: 92.48px; 
+  background-color: #ededed;
+  border-radius: 10px;
+}
+
+#palmtree{
+  height: 92.48px;
+  width: 92.48px; 
+  background-color: #ededed;
+  border-radius: 10px;
+}
+
+#flower{
+  height: 92.48px;
+  width: 92.48px; 
+  background-color: #ededed;
+  border-radius: 10px;
 }
 
 #thuglife{
-	height: 100%;
-	width: 100%;
+  height: 92.48px;
+  width: 92.48px;
 }
 
 #frame{
-	height: 100%;
-	width: 100%;
   opacity: 1;
+  height: 92.48px;
+  width: 92.48px;
+  background-color: #ededed;
+  border-radius: 10px; 
 }
 
 #goldchain{
-	height: 100%;
-	width: 100%;
+  height: 92.48px;
+  width: 92.48px;
   opacity: 1;
 }
 
 .memePic{
-	text-align: center;
+  text-align: center;
 }
 
 .memePic #memeimg{
-	padding-left: 2%;
-	padding-right: 2%;
-	height: 100%;
-	width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 100%;
+  width: 100%;
 }
 
 .memebutton{
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 #MemeBtn{
-	background-color: green;
-	color: white;
-	height: 40px;
-	width: 100px;
+  background-color: green;
+  color: white;
+  height: 40px;
+  width: 100px;
 
 }
 
 .listheader{
-	padding: 50px;
+  padding-left: 20px;
 }
 
 .listheader2{
-	padding: 5px;
+  padding: 5px;
   border-style: dashed;
 }
 
-#header {
+.header {
   height: 60px;
+  display: grid;
+  grid-template-columns: [first] 10% auto;
+  padding-top: 10px
 }
 
 #icon {
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 #header-redeem {
@@ -182,10 +251,25 @@ width:50%;
   height: 15px;
   background-color: green;
   border-radius: 10px;
-  max-width: 90vw;
+  max-width: 88vw;
 }
 
 .progressBar {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.progressBar h5 {
+  padding-left: 0%;
+  margin-top: 0;
+}
+
+#placeholder h4 {
+  text-align: left;
+}
+
+#border {
+  padding-bottom: 10px;
 }

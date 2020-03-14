@@ -46,7 +46,7 @@
 
         <div class="main" style = "background-color: white">
 
-            <div id="container" style = "background-color: white">
+            <div id="container_redeem" style = "background-color: white">
                 <div class="header">
                     {{#if viewAlt}}
                     <div id="icon" style="opacity: 0">
@@ -61,12 +61,15 @@
                         </a>
                     </div>
                     {{/if}}
+                    <div id="pagename">
+                        <h3> <b>My Profile</b> </h3>
+                    </div>
 
-                    <h4> <b>My Profile</b> </h4>
                 </div>
-                <hr>
+                    <div class="borderdiv">
+                        <hr id="border"/>
+                    </div>
 
-                <br>
                     <div class="profilediv">
                         <div id="profile">
                           <div id="profile-center">
@@ -79,6 +82,15 @@
                             {{/if}}
                             {{#if goldchainBought}}
                             <img class="goldchain2" id=goldchain2 src="goldchain2.png">
+                            {{/if}}
+                            {{#if puppyBought}}
+                            <img class="puppy2" id=puppy2 src="puppy2.png">
+                            {{/if}}
+                            {{#if palmtreeBought}}
+                            <img class="palmtree2" id=palmtree2 src="palmtree2.png">
+                            {{/if}}
+                            {{#if flowerBought}}
+                            <img class="flower2" id=flower2 src="flower2.png">
                             {{/if}}
 
                           </div>
@@ -115,4 +127,4 @@
         
     </body>
 
-</html>    
+</html>      
