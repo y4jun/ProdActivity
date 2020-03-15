@@ -32,7 +32,7 @@ exports.addAssignment = function(req, res){
  						"description": req.query.description,
  						"color": color,
  						"priority" : priority,
- 						"points": req.query.points
+ 						"stars": "1"
  					    };
  
  	data.assignments.push(newAssignment)

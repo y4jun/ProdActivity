@@ -280,7 +280,7 @@ function overlay6(){
 function memegenerate(){
 
 	var currPoints = parseInt($('#displayPoints h4').text());
-	var cost = 5;
+	var cost = 1;
 
 	if(currPoints >= cost){
 

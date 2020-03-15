@@ -19,8 +19,8 @@
 	"fbLoggedIn" : false,
 	"displayName" : "Example Name",
 	"profilePic" : "defaultpp.png",
-	"totalPoints" : 0,
-	"currPoints" : 0,
+	"totalStars" : 0,
+	"currStars" : 0,
 	"beltType" : "white",
 	"beltImg" : "white.png",
 	"thuglifeBought" : false,
@@ -38,7 +38,7 @@
 			"date" : "10 Mar 2020",
 			"color" : "#ffdb4d",
 			"priority" : "med",
-			"points" : 20,
+			"stars" : 1,
 			"description" : "User's inputted description for this assignment"			
 		},
 		{
@@ -48,7 +48,7 @@
 			"date" : "2 Mar 2020",
 			"color" : "#71da71",
 			"priority" : "low",
-			"points" : 15,
+			"stars" : 2,
 			"description" : "User's inputted description for this assignment"
 		},
 		{
@@ -58,7 +58,7 @@
 			"date" : "29 Feb 2020",
 			"color" : "#ff3333",
 			"priority" : "high",
-			"points" : 35,
+			"stars" : 3,
 			"description" : "User's inputted description for this assignment"
 
 		},
@@ -69,7 +69,7 @@
 			"date" : "28 Feb 2020",
 			"color" : "#ff3333",
 			"priority" : "high",
-			"points" : 25,
+			"stars" : 2,
 			"description" : "User's inputted description for this assignment"
 		}
 	],
