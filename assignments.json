@@ -26,6 +26,9 @@
 	"thuglifeBought" : false,
 	"frameBought" : false,
 	"goldchainBought" : false,
+	"puppyBought" : false,
+	"palmtreeBought" : false,
+	"flowerBought" : false,
 	"assignments": [
 		{
 

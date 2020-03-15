@@ -352,6 +352,7 @@ input:checked + .slider:before {
 
 #app-title{
   text-align: center;
+  padding-left: 20px;
 }
 
 /* side navigation menu */
